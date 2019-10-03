@@ -1,0 +1,95 @@
+@import "read"
+@import "actix"
+@import "tokio"
+@import "www"
+@import "weekly"
+
+.carbon-ads, .bsa-cpc-wrapper, .bsa-cpc {
+    display: none;
+}
+
+.navbar, .nav-links, .links {
+    background: linear-gradient(315deg,  #e5e6f8 0%,  #e5e6f8 100%);
+    border: none;
+}
+
+.front, button, #news {
+    background: linear-gradient(315deg,  #f5c4d4 0%,  #c4f5ed 100%);
+    border: none;
+}
+
+.site-name, .navbar a {
+    color: #7B463D;
+    font-weight: bold;
+}
+
+.content div[class*="language-"] {
+    background-color: #1D0D00;
+}
+.content code {
+    color: #7B463D;
+}
+
+.front {
+    max-height: 666px;
+}
+
+.home .hero {
+    color: #7B463D !important;
+}
+.home .description {
+    color: #7B463D !important;
+}
+.home .topic {
+    padding: 0.1rem 2.2rem;
+    border-radius: 5%; 
+    height 4rem;
+}
+
+.home .topic a {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #7B463D;
+}
+
+.home #join, #news {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+.home #join a, .home #news a {
+    font-weight: bold;
+    color: #7B463D;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 1px;
+    background-color: #F5F5F5;
+}
+ 
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 16px rgba(0,0,0,.3);
+    background-color: #8AC3421;
+}
+
+@media (max-width: 420px) {
+    .front {
+        max-height: 533px;
+    }
+    .content div[class*="language-"] {
+        margin: 0.2rem;
+    }
+}
+@media (min-width: 420px) and (max-width: 607px) {
+    .front {
+        max-height: 700px;
+    }
+}  
+@media (min-width: 608px) and (max-width: 768px) {
+    .front {
+        max-height: 666px;
+    }
+}
