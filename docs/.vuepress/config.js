@@ -51,6 +51,14 @@ module.exports = {
               { text: 'Rust语言目录', link: '/langs/rust/' },
             ]
           },
+	  { text: '数据库', items: [
+              { text: 'PostgreSQL', link: '/dba/postgresql/' },
+            ]
+          },
+          { text: '操作系统', items: [
+              { text: 'Linux', link: '/os/linux/' },
+            ]
+          },
           { text: '网络', link: '/www/resource.html' }
           
         ],
