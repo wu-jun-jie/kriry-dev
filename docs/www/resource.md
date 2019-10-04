@@ -3,33 +3,19 @@
 ## Rust官方
 
 * [Rust-lang]( https://www.rust-lang.org  )
-* [Rust-Doc](https://rustlang-cn.org/office/rust/)
+* [Rust-Doc](https://dev.kriry.com/langs/rust/)
 * [Rust Forge](https://forge.rust-lang.org/)
 * [Rust Github](https://github.com/rust-lang)
-
-## Rust中文
-
-- [Rust中文](https://rustlang-cn.org)
-- [Rust中文阅读](https://rustlang-cn.org/read/)
-- **微信公众号：Rust中文**
-- [Rust中文微博](https://weibo.com/kriry?is_all=1)
-- [Rust中文论坛](http://kriry.com/a/community/rust)
-- [Rust中文知乎](https://zhuanlan.zhihu.com/rustlang-cn)
-- [Rust中文聊天室](https://riot.im/app/#/room/#rustlang-cn:matrix.org)
-- [Rust中文Github](https://github.com/rustlang-cn)
-- **QQ-1群：570065685**
-- **QQ-2群：258124913**
 
 ## Awesome
 
 - [Awesome-Rust](https://github.com/rust-unofficial/awesome-rust/blob/master/README.md)
-- [Awesome-Rust中文](https://rustlang-cn.org/www/resource.html#rust%E4%B8%AD%E6%96%87)
-- [Awesome-Crates](https://rustlang-cn.org/www/crates.html)
-- [Awesome-Wasm](https://rustlang-cn.org/www/wasm.html)
-- [Awesome-IOT](https://rustlang-cn.org/www/iot.html)
-- [Awesome-Server](https://rustlang-cn.org/www/server.html)
-- [Awesome-Actix](https://rustlang-cn.org/www/actix.html)
-- [Awesome-Tokio](https://rustlang-cn.org/www/tokio.html)
+- [Awesome-Crates](https://dev.kriry.com/www/crates.html)
+- [Awesome-Wasm](https://dev.kriry.com/www/wasm.html)
+- [Awesome-IOT](https://dev.kriry.com/www/iot.html)
+- [Awesome-Server](https://dev.kriry.com/www/server.html)
+- [Awesome-Actix](https://dev.kriry.com/www/actix.html)
+- [Awesome-Tokio](https://dev.kriry.com/www/tokio.html)
 
 ## Rust语言
 
@@ -44,9 +30,7 @@
 
 ## 书籍
 
-* [**官方Rust书录**](https://rustlang-cn.org/office/rust/)
-* [**Rust生态库书录**](https://rustlang-cn.org/crates/)
-* [**Rust中文用户书录**](https://rustlang-cn.org/users/)
+* [**Rust语言书录**](https://dev.kriry.com/langs/rust/)
 * [中文Rust By Example](https://rustwiki.org/zh-CN/rust-by-example/index.html)
 
 ## 视频
@@ -57,7 +41,6 @@
 ## 博客
 
 * [Rust语言官方博客](https://blog.rust-lang.org/) - Rust语言官方博客
-* [Rust中文阅读](https://rustlang-cn.org/read/)
 * [Aaron Turon](http://aturon.github.io/)
 * [Andrew Gallant](http://blog.burntsushi.net/)
 * [Andrew Hobden](https://hoverbear.org/tags/#rust)
@@ -75,4 +58,3 @@
 * [Yehuda Katz](http://yehudakatz.com/)
 * [Steve Klabnik](http://words.steveklabnik.com/)
 * [beachape](https://beachape.com/)
-* [亦输](http://www.cnblogs.com/pyzh)

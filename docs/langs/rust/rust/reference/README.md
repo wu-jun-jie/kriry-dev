@@ -15,11 +15,11 @@
 
 ## 本书不是什么
 
-本书不作为该语言的介绍。假设背景熟悉该语言。有一本单独的[书](https://rustlang-cn.org/office/rust/book/)可以帮助获得这种背景知识。
+本书不作为该语言的介绍。假设背景熟悉该语言。有一本单独的[书](https://dev.kriry.com/langs/rust/rust/book/)可以帮助获得这种背景知识。
 
 本书也不作为 语言分发中包含的标准库的参考。通过从源代码中提取文档属性，可以单独记录这些库。人们可能期望语言功能的许多功能都是Rust中的库功能，所以你在寻找的可能就在那里，而不是在这里。
 
-同样，本书通常不会记录`rustc`作为工具或Cargo的具体情况。`rustc`有自己的书。Cargo有一本包含参考的[书](https://rustlang-cn.org/office/rust/cargo/)。有一些页面，如[链接](https://rustlang-cn.org/office/rust/reference/linkage.html)仍然描述`rustc`如何工作。
+同样，本书通常不会记录`rustc`作为工具或Cargo的具体情况。`rustc`有自己的书。Cargo有一本包含参考的[书](https://dev.kriry.com/langs/rust/rust/cargo/)。有一些页面，如[链接](https://dev.kriry.com/langs/rust/rust/reference/linkage.html)仍然描述`rustc`如何工作。
 
 本书也仅作为稳定Rust中可用内容的参考。有关正在处理的不稳定功能，请参阅[不稳定的书籍](https://doc.rust-lang.org/nightly/unstable-book/)。
 

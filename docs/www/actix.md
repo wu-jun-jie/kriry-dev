@@ -9,7 +9,7 @@
 ## 官方
 
 - [Actix英文](https://actix.rs/)
-- [Actix中文](https://rustlang-cn.org/crates/actix/)
+- [Actix中文](https://dev.kriry.com/langs/rust/crate/actix-web/)
 - [actix](https://github.com/actix/actix) : Actor framework for Rust
 - [actix-net](https://github.com/actix/actix-net) : 可组合网络服务的框架
 - [actix-web](https://github.com/actix/actix-web) : Actix web is a rust web framework.
