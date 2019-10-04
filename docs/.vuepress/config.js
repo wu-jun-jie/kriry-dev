@@ -48,25 +48,30 @@ module.exports = {
         searchMaxSuggestions: 11,
         nav: [
           { text: 'kriry.com', link: 'http://kriry.com' },
+	  { text: 'Web开发', items: [
+              	  { text: 'HTML', link: '/web/html/' },
+		  { text: 'CSS', link: '/web/css/' },
+		  { text: 'WebAPI', link: '/web/api/' },
+            ]
+          },
           { text: '编程语言', items: [
-              { text: 'Rust语言目录', link: '/langs/rust/' },
-              { text: 'Go语言目录', link: '/langs/go/' },
+                  { text: 'Rust语言目录', link: '/langs/rust/' },
+                  { text: 'Go语言目录', link: '/langs/go/' },
             ]
           },
 	  { text: '数据库', items: [
-              { text: 'PostgreSQL', link: '/dba/postgresql/' },
+                  { text: 'PostgreSQL', link: '/dba/postgresql/' },
             ]
           },
           { text: '操作系统', items: [
-              { text: 'Linux', link: '/os/linux/' },
+                  { text: 'Linux', link: '/os/linux/' },
             ]
           },
 	  { text: '协议', items: [
-              { text: 'HTTP2', link: '/protocol/http2/' },
+                  { text: 'HTTP2', link: '/protocol/http2/' },
             ]
           },
           { text: '网络', link: '/www/resource.html' }
-          
         ],
         sidebar: {
           '/langs/rust/rust/book/': book('Rust'),
