@@ -1,8 +1,8 @@
 # Go 语言环境
 
-Go 语言支安装包下载地址为：https://golang.org/dl/
+Go 语言支安装包下载地址为：`https://golang.org/dl/`
 
-如果打不开可以使用这个地址：https://golang.google.cn/dl/
+如果打不开可以使用这个地址：`https://golang.google.cn/dl/`
 
 ## 安装
 
@@ -23,9 +23,6 @@ export PATH=$PATH:/usr/local/go/bin
 ```
 
 > 注意：MAC 系统下你可以使用 .pkg 结尾的安装包直接双击来完成安装，安装目录在 /usr/local/go/ 下。
-
-
------------------------------------------------------------------------------------------
 
 当我们使用 `go get`、`go install`、`go mod` 等命令时，会自动下载相应的包或依赖包。但由于众所周知的原因，类似于 `golang.org/x/...` 的包会出现下载失败的情况。如下所示：
 
