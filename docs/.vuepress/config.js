@@ -1,15 +1,21 @@
-let { book } = require ('./category/rust.js')
-let { advrust } = require ('./category/advrust.js')
-let { asyncrust } = require ('./category/asyncrust.js')
-let { reference } = require ('./category/reference.js')
-let { cargo } = require ('./category/cargo.js')
-let { book_exp } = require ('./category/user/book-exp.js')
+let { book } = require ('./category/rust/rust.js')
+let { advrust } = require ('./category/rust/advrust.js')
+let { asyncrust } = require ('./category/rust/asyncrust.js')
+let { reference } = require ('./category/rust/reference.js')
+let { cargo } = require ('./category/rust/cargo.js')
+let { discovery } = require ('./category/rust/discovery.js')
+let { actixweb } = require ('./category/rust/actixweb.js')
+let { diesel } = require ('./category/rust/diesel.js')
+let { riker } = require ('./category/rust/riker.js')
+let { serde } = require ('./category/rust/serde.js')
+let { tokio } = require ('./category/rust/tokio.js')
+let { book_exp } = require ('./category/rust/user/book-exp.js')
 let { www } = require ('./category/www.js')
 
 module.exports = {
     extend: '@vuepress/theme-default',
     title: 'kriry开发者网络',
-    description: 'Kriry Developer Net',
+    description: '欢迎参与-共建kriry开发者网络',
     head: [
       ['link', { rel: 'icon', href: `/favicon.ico` }],
       ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -26,9 +32,9 @@ module.exports = {
       'vuepress-plugin-baidu-autopush': {}
     },
     themeConfig: {
-        repo: 'kriry/kdn',
+        repo: 'kriry/kriry-dev',
         docsDir: 'docs',
-        logo: '/imgs/rust.png',
+        logo: '/imgs/kriry-logo.png',
         displayAllHeaders: true,
         editLinks: true,
         editLinkText: '在 GitHub 上编辑此页',
@@ -40,30 +46,27 @@ module.exports = {
         },
         searchMaxSuggestions: 11,
         nav: [
-          { text: 'kriry', link: 'http://kriry.com' },
+          { text: 'kriry.com', link: 'http://kriry.com' },
           { text: '编程语言', items: [
-              { text: 'Rust语言', items: [
-                  { text: 'Rust总书录', link: '/rust/' },
-                  { text: 'Rust编程语言', link: '/rust/rust/book/' },
-                  { text: 'Rust高级编程', link: '/rust/rust/advrust/' },
-                  { text: 'Rust异步编程', link: '/rust/rust/async-rust/' },
-                  { text: 'Rust语言参考', link: '/rust/rust/reference/' },
-                  { text: 'Cargo教程', link: '/rust/rust/cargo/' },
-                  { text: 'The Book-学习心得', link: '/rust/user/book-exp/' }
-                ]
-              }
+              { text: 'Rust语言目录', link: '/langs/rust/' },
             ]
           },
           { text: '网络', link: '/www/resource.html' }
           
         ],
         sidebar: {
-          '/rust/rust/book/': book('Rust'),
-          '/rust/rust/advrust/': advrust('AdvRust'),
-          '/rust/rust/async-rust/': asyncrust('Async-Rust'),
-          '/rust/rust/reference/': reference('Reference'),
-          '/rust/rust/cargo/': cargo('Cargo'),
-          '/rust/user/book-exp/': book_exp('book_exp'),
+          '/langs/rust/rust/book/': book('Rust'),
+          '/langs/rust/rust/advrust/': advrust('AdvRust'),
+          '/langs/rust/rust/async-rust/': asyncrust('Async-Rust'),
+          '/langs/rust/rust/reference/': reference('Reference'),
+          '/langs/rust/rust/cargo/': cargo('Cargo'),
+          '/langs/rust/rust/discovery/': discovery('Discovery'),
+          '/langs/rust/crate/tokio/': tokio('Tokio'),
+          '/langs/rust/crate/actix-web/': actixweb('Actix-Web'),
+          '/langs/rust/crate/diesel/': diesel('Diesel'),
+          '/langs/rust/crate/riker/': riker('Riker'),
+          '/langs/rust/crate/serde/': serde('Serde'),
+          '/langs/rust/user/book-exp/': book_exp('book_exp'),
           '/www/': www('www')
         }
     }
