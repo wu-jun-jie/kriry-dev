@@ -1,4 +1,4 @@
-# Go 语言环境
+# Go 编程语言
 
 Go 语言支安装包下载地址为：`https://golang.org/dl/`
 
