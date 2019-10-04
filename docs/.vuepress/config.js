@@ -16,7 +16,7 @@ let { www } = require ('./category/www.js')
 module.exports = {
     extend: '@vuepress/theme-default',
     title: 'kriry开发者网络',
-    description: '欢迎参与-共建kriry开发者网络',
+    description: '始于开发者, 服务于开发者的网络资源',
     head: [
       ['link', { rel: 'icon', href: `/favicon.ico` }],
       ['link', { rel: 'manifest', href: '/manifest.json' }],
