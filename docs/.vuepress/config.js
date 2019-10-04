@@ -10,6 +10,7 @@ let { riker } = require ('./category/rust/riker.js')
 let { serde } = require ('./category/rust/serde.js')
 let { tokio } = require ('./category/rust/tokio.js')
 let { book_exp } = require ('./category/rust/user/book-exp.js')
+let { gobook } = require ('./category/go/book.js')
 let { www } = require ('./category/www.js')
 
 module.exports = {
@@ -49,6 +50,7 @@ module.exports = {
           { text: 'kriry.com', link: 'http://kriry.com' },
           { text: '编程语言', items: [
               { text: 'Rust语言目录', link: '/langs/rust/' },
+              { text: 'Go语言目录', link: '/langs/go/' },
             ]
           },
 	  { text: '数据库', items: [
@@ -75,6 +77,7 @@ module.exports = {
           '/langs/rust/crate/riker/': riker('Riker'),
           '/langs/rust/crate/serde/': serde('Serde'),
           '/langs/rust/user/book-exp/': book_exp('book_exp'),
+          '/langs/go/book/': gobook('gobook'),
           '/www/': www('www')
         }
     }
