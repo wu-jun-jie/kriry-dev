@@ -1,81 +1,128 @@
-<div id="tokio">
+# 何为Tokio
 
-<div id="tokio-nav">
-    <div class="logo">
-        <a href="/crates/tokio/"><img src="https://tokio.rs/img/Tokio_Mark_Large.png"></a>
-    </div>
-    <div class="title">
-        <li class="nav"><a href="/crates/tokio/">首页</a></li>
-        <li class="nav"><a href="/crates/tokio/docs/getting-started/hello-world.html">文档</a></li>
-        <li class="nav"><a href="/crates/tokio/community.html">社区</a></li>
-        <li class="nav"><a href="/crates/tokio/blog/2018-12-recap-2018.html">博客</a></li>
-        <li class="nav"><a href="/crates/tokio/resource.html">资源</a></li>
-    </div>
-</div>
+Tokio允许开发人员用Rust编程语言编写异步程序。它允许开发人员编写在执行长时间运行操作的期间继续执行程序，而不是同步地等待长时间运行的操作（如读取文件或等待计时器完成）才执行之后的操作。
 
-<div id="show">
-    <div class="left">
-        <h1>Tokio</h1>
-        <p>Rust编程语言的异步运行时,提供异步事件驱动平台，构建快速，可靠和轻量级网络应用。利用Rust的所有权和并发模型确保线程安全</p>
-        <a href="/crates/tokio/docs/overview.html">开始</a>
-    </div>
-    <div class="right">
-        <img src="https://tokio.rs/img/Tokio_Mark_Large.png" >
-    </div>
-</div>
+进一步来说，Tokio是一个事件驱动的非阻塞I / O平台，用于使用Rust编程语言编写异步应用程序。在较高的层面上，它提供了一些主要组件：
 
-<div class="features">
-  <div class="left">
-    <h2>快速</h2>
-    <p>Tokio构建于Rust之上，提供极快的性能，使其成为高性能服务器应用程序的理想选择。</p>
-    <div>
-        <h4>零成本抽象</h4>
-        <p>与完全手工编写的等效系统相比，Tokio的运行时模型不会增加任何开销</p>
-        <h4>并发</h4>
-        <p>使用Tokio构建的应用程序是开箱即用的。 Tokio提供了针对异步网络工作负载调整的多线程，工作窃取任务调度程序。</p>
-        <h4>非阻塞I/O</h4>
-        <p>Tokio由操作系统提供的非阻塞，事件，I / O堆栈支持。</p>
-    </div>
-    <div><a href="/crates/tokio/docs/overview.html/#%E5%BF%AB%E9%80%9F">更多</a></div>
-  </div>
-  <div class="center">
-    <h2>可靠</h2>
-    <p>虽然Tokio无法阻止所有错误，但它的目的是最小化它们。 Tokio在运送关键任务应用程序时带来了安心。</p>
-    <div>
-        <h4>所有权和类型系统</h4>
-        <p>Tokio利用Rust的类型系统来提供难以滥用的API。</p>
-        <h4>Backpressure</h4>
-        <p>Backpressure开箱即用，无需使用任何复杂的API。</p>
-        <h4>取消</h4>
-        <p>Rust的所有权模型允许Tokio自动检测何时不再需要计算。 Tokio将自动取消它而无需用户调用取消功能。</p>
-    </div>
-    <div><a href="/crates/tokio/docs/overview.html/#%E5%8F%AF%E9%9D%A0">更多</a></div>
-  </div>
-  <div class="right">
-    <h2>轻量级</h2>
-    <p>Tokio可以很好地扩展，而不会增加应用程序的开销，使其能够在资源受限的环境中茁壮成长</p>
-    <div>
-        <h4>无GC</h4>
-        <p>因为Tokio使用Rust，所以不包括垃圾收集器或其他语言运行时。</p>
-        <h4>模块化</h4>
-        <p>Tokio是一个小组件的集合。 用户可以选择最适合手头应用的部件，而无需支付未使用功能的成本。</p>
-    </div>
-    <div><a href="/crates/tokio/docs/overview.html/#%E8%BD%BB%E9%87%8F%E7%BA%A7">更多</a></div>
-  </div>
-</div>
+* 基于多线程，工作窃取的任务调度程序。
+* 由操作系统的事件队列（epoll，kqueue，IOCP等）支持的反应器。
+* 异步TCP和UDP套接字。
 
-<br>
+这些组件提供构建异步应用程序所需的运行时组件。
 
-<div id = "footer">
-    <a href="https://github.com/tokio-rs/tokio" target="_black">GitHub</a>&emsp;
-    <a href="https://twitter.com/tokio_rs" target="_black">Twitter</a>&emsp;
-    <a href="https://github.com/tokio-rs/tokio/tree/master/examples" target="_black">示例</a>&emsp;
-    <a href="/crates/tokio/docs/getting-started/overview.html" target="_black">概括</a>&emsp;
-    <a href="https://tokio.rs/gsoc/" target="_black">GSOC</a>&emsp;
-    <a href="https://github.com/rustlang-cn/rustlang-cn" target="_black">Rust中文</a>&emsp;
+## 快速
 
-<p>Tokio是由我们的@carllerche和贡献者所有的爱和帮助下构建的</p>
+Tokio是基于Rust编程语言构建的，它本身非常快。使用Tokio构建的应用程序将获得同样的好处。 Tokio的设计也旨在使应用程序尽可能快。
 
-</div>
+### 零成本抽象
 
-</div>
+Tokio以`Future`为基础。`Future`不是一个新主意，但Tokio使用它们的方式是独一无二的。与其他语言的`Future`不同，Tokio的`Future`编译成状态机。用`Future`实现常见的同步，分配或其他不会增加额外开销成本。
+
+请注意，提供零成本抽象并不意味着Tokio本身没有成本。这意味着使用Tokio导致最终产品具有与不使用Tokio相同的开销。
+
+#### 并发
+
+开箱即用，Tokio提供了一个多线程，工作窃取的调度程序。因此，当您使用tokio :: run开始使用应用程序时，您已经在使用所有计算机的CPU内核。
+
+现代计算机通过添加内核来提高其性能，因此能够利用多个内核对于编写快速应用程序至关重要。
+
+#### 非阻塞I/O
+
+当访问网络时，Tokio将使用操作系统可用的最有效系统。在Linux上，这意味着epoll，* bsd平台提供kqueue，Windows具有I / O完成端口。
+
+这允许在单个线程上多路复用许多套接字并批量接收操作系统通知，从而减少系统调用。所有这些都可以减少应用程序的开销。
+
+## 可靠
+
+虽然Tokio无法阻止所有错误，但它的目的是最小化它们。它通过提供难以滥用的API来实现这一点。到最后，您可以放心地将应用程序运送到生产中。
+
+### 所有权和类型系统
+
+Rust的所有权模型和类型系统可以实现系统级应用程序，而不必担心内存不安全。它可以防止经典错误，例如访问未初始化的内存并免费使用。它在不添加任何运行时开销的情况下执行此操作。
+
+此外，API能够利用类型系统来提供难以滥用的API。例如，Mutex不要求用户明确解锁：
+
+```rust
+use std::sync::Mutex;
+
+let foo = "".to_string();
+let data = Mutex::new(foo);
+
+let locked = data.lock().unwrap();
+println!("locked data: {}", &locked[..]);
+
+// The lock is automatically released here when `locked` goes out of scope.
+```
+
+#### 背压
+
+在基于推送的系统中，当生产者生成的数据快于消费者可以处理的数据时，数据将开始备份。待处理数据存储在内存中。除非生产者停止生产，否则系统最终会耗尽内存并崩溃。消费者通知生产者减速的能力是背压。
+
+因为Tokio使用基于轮询的模型，所以问题大多消失了。生产者默认是懒惰的。除非消费者要求，否则他们不会产生任何数据。这是Tokio的基础。
+
+#### 消除
+
+由于Tokio基于轮询的模型，除非对它们进行轮询，否则计算不起作用。该计算的依赖性持有表示该计算结果的`Future`。如果不再需要结果，则会删除`Future`。此时，将不再轮询计算，因此不再执行任何工作。
+
+由于Rust的所有权模型，计算能够实现drop handle以检测`Future`的droped。这允许它执行任何必要的清理工作。
+
+## 轻量级
+
+Tokio可以很好地扩展，而不会增加应用程序的开销，使其能够在资源受限的环境中茁壮成长。
+
+### 没有垃圾收集器
+
+因为Tokio是基于Rust构建的，所以编译后的可执行文件包含最少的语言运行时。最终产品类似于C ++将生成的产品。这意味着，没有垃圾收集器，没有虚拟机，没有JIT编译，也没有堆栈操作。编写您的服务器应用程序，而不必担心停止世界停顿。
+
+可以使用Tokio而不会产生任何运行时分配，使其非常适合实时用例。
+
+#### 模块化
+
+虽然Tokio提供了很多开箱即用的功能，但它的组织非常模块化。每个组件都位于一个单独的库中。如果需要，应用程序可以选择挑选所需的组件，避免依赖其余组件。
+
+Tokio充分利用`mio`作为系统事件队列和`futures`来定义任务，Tokio实现`async`语法以提`futures`的可读性。许多库都是使用Tokio实现的，包括`hyper`和`actix`。
+
+例子:带有Tokio的基本TCP echo服务器：
+
+```rust
+extern crate tokio;
+
+use tokio::prelude::*;
+use tokio::io::copy;
+use tokio::net::TcpListener;
+
+fn main() {
+    // Bind the server's socket.
+    let addr = "127.0.0.1:12345".parse().unwrap();
+    let listener = TcpListener::bind(&addr)
+        .expect("unable to bind TCP listener");
+
+    // Pull out a stream of sockets for incoming connections
+    let server = listener.incoming()
+        .map_err(|e| eprintln!("accept failed = {:?}", e))
+        .for_each(|sock| {
+            // Split up the reading and writing parts of the
+            // socket.
+            let (reader, writer) = sock.split();
+
+            // A future that echos the data and returns how
+            // many bytes were copied...
+            let bytes_copied = copy(reader, writer);
+
+            // ... after which we'll print what happened.
+            let handle_conn = bytes_copied.map(|amt| {
+                println!("wrote {:?} bytes", amt)
+            }).map_err(|err| {
+                eprintln!("IO error {:?}", err)
+            });
+
+            // Spawn the future as a concurrent task.
+            tokio::spawn(handle_conn)
+        });
+
+    // Start the Tokio runtime
+    tokio::run(server);
+}
+```
+
+更多例子在[这里](https://github.com/tokio-rs/tokio/tree/master/examples)
