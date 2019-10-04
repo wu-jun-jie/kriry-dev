@@ -1,11 +1,18 @@
 exports.www = (title) => {
     return [
-        'resource',
-        'crates',
-        'wasm',
-        'iot',
-        'server',
-        'actix',
-        'tokio'
+        '',
+        {
+            title: 'Rust',
+            collapsable: true,
+            children: [
+                'rust/resource',
+                'rust/crates',
+                'rust/wasm',
+                'rust/iot',
+                'rust/server',
+                'rust/actix',
+                'rust/tokio'
+            ]
+          }
     ]
 }

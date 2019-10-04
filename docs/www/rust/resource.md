@@ -10,12 +10,12 @@
 ## Awesome
 
 - [Awesome-Rust](https://github.com/rust-unofficial/awesome-rust/blob/master/README.md)
-- [Awesome-Crates](https://dev.kriry.com/www/crates.html)
-- [Awesome-Wasm](https://dev.kriry.com/www/wasm.html)
-- [Awesome-IOT](https://dev.kriry.com/www/iot.html)
-- [Awesome-Server](https://dev.kriry.com/www/server.html)
-- [Awesome-Actix](https://dev.kriry.com/www/actix.html)
-- [Awesome-Tokio](https://dev.kriry.com/www/tokio.html)
+- [Awesome-Crates](https://dev.kriry.com/www/rust/crates.html)
+- [Awesome-Wasm](https://dev.kriry.com/www/rust/wasm.html)
+- [Awesome-IOT](https://dev.kriry.com/www/rust/iot.html)
+- [Awesome-Server](https://dev.kriry.com/www/rust/server.html)
+- [Awesome-Actix](https://dev.kriry.com/www/rust/actix.html)
+- [Awesome-Tokio](https://dev.kriry.com/www/rust/tokio.html)
 
 ## Rust语言
 

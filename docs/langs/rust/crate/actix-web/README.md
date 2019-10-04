@@ -10,4 +10,4 @@ Actix是一个强大的Rust的actor系统, 在它之上是actix-web框架。这�
 
 最重要的是：actix-web可以稳定发布。
 
-[Awesome-Actix](/www/actix.html)
+[Awesome-Actix](/www/rust/actix.html)

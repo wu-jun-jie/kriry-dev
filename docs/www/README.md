@@ -1,3 +1,3 @@
 # 网络
 
-- [Rust](/www/rust/)
+## [Rust](/www/rust/resource.html)
