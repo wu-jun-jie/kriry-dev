@@ -1,8 +1,8 @@
 {
-  "name": "kdn",
+  "name": "kriry-dev",
   "version": "1.0.0",
-  "description": "doc.kriry.com",
-  "repository": "https://github.com/kriry/kdn.git",
+  "description": "dev.kriry.com",
+  "repository": "https://github.com/kriry/kriry-dev.git",
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev docs",
