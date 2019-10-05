@@ -48,10 +48,10 @@ module.exports = {
         searchMaxSuggestions: 11,
         nav: [
           { text: 'kriry.com', link: 'http://kriry.com' },
-	  { text: 'Web开发', items: [
-              	  { text: 'HTML', link: '/web/html/' },
-		  { text: 'CSS', link: '/web/css/' },
-		  { text: 'WebAPI', link: '/web/api/' },
+	        { text: 'Web开发', items: [
+              	    { text: 'HTML', link: '/web/html/' },
+		                { text: 'CSS', link: '/web/css/' },
+		                { text: 'WebAPI', link: '/web/api/' },
             ]
           },
           { text: '编程语言', items: [
@@ -59,7 +59,7 @@ module.exports = {
                   { text: 'Go语言目录', link: '/langs/go/' },
             ]
           },
-	  { text: '数据库', items: [
+	        { text: '数据库', items: [
                   { text: 'PostgreSQL', link: '/dba/postgresql/' },
             ]
           },
@@ -67,7 +67,7 @@ module.exports = {
                   { text: 'Linux', link: '/os/linux/' },
             ]
           },
-	  { text: '协议', items: [
+	        { text: '协议', items: [
                   { text: 'HTTP2', link: '/protocol/http2/' },
             ]
           },
