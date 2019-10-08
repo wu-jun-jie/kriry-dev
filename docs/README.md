@@ -43,8 +43,9 @@ footer: MIT Licensed | Copyright © 2019-present | kriry开发者网络
   <div class="feature">
     <button class="qzone">编程语言</button><br>&nbsp;<br>&nbsp;
     <a href="/langs/clang/" ><strong>Clang</strong></a><br>&nbsp;
+    <a href="/langs/cpp/" ><strong>C++</strong></a><br>&nbsp;
     <a href="/langs/rust/" ><strong>Rust</strong></a><br>&nbsp;
-    <a href="/langs/go/" ><strong>Go</strong></a><br>&nbsp;
+    <a href="/langs/ecmascript/" ><strong>Ecmascript</strong></a><br>&nbsp;
   </div>
   <div class="feature">
     <button class="qzone">数据库</button><br>&nbsp;<br>&nbsp;
@@ -65,7 +66,6 @@ footer: MIT Licensed | Copyright © 2019-present | kriry开发者网络
   <div class="feature">
     <button class="qzone">网络</button><br>&nbsp;<br>&nbsp;
     <a href="/www/"><strong>网络</strong></a><br>&nbsp;
-    <a href="/www/rust/resource.html"><strong>Rust</strong></a><br>&nbsp;
   </div>
 </div>
 <br>

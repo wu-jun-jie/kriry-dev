@@ -12,20 +12,25 @@
 
 ### 编程语言
 
+- [C语言目录](/langs/clang/)
+- [C++语言目录](/langs/cpp/)
 - [Rust语言目录](/langs/rust/)
-- [Go语言目录](/langs/go/)
+- [Ecmascript目录](/langs/ecmascript/)
 
 ### 数据库
 
 - [PostgreSQL](/dba/postgresql/)
+- [MongoDB](/dba/mongodb/)
 
 ### 操作系统
 
 - [Linux](/os/linux/)
+- [Harmony](/os/harmony/)
 
 ### 协议
 
 - [HTTP2](protocol/http2/)
+- [HTTP3](protocol/http3/)
 
 ### 网络
 

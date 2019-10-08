@@ -10,7 +10,13 @@ let { riker } = require ('./category/rust/riker.js')
 let { serde } = require ('./category/rust/serde.js')
 let { tokio } = require ('./category/rust/tokio.js')
 let { book_exp } = require ('./category/rust/user/book-exp.js')
-let { gobook } = require ('./category/go/book.js')
+
+let { book_c } = require ('./category/clang/book.js')
+
+let { book_cpp } = require ('./category/cpp/book.js')
+
+let { book_es } = require ('./category/ecmascript/book.js')
+
 let { www } = require ('./category/www.js')
 
 module.exports = {
@@ -92,7 +98,13 @@ module.exports = {
           '/langs/rust/crate/riker/': riker('Riker'),
           '/langs/rust/crate/serde/': serde('Serde'),
           '/langs/rust/user/book-exp/': book_exp('book_exp'),
-          '/langs/go/book/': gobook('gobook'),
+
+          '/langs/clang/book/': book_c('Clang'),
+
+          '/langs/cpp/book/': book_cpp('CPP'),
+
+          '/langs/ecmascript/book/': book_es('Ecmascript'),
+
           '/www/': www('www')
         }
     }
