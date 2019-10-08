@@ -71,7 +71,8 @@ module.exports = {
                   { text: 'HTTP2', link: '/protocol/http2/' },
             ]
           },
-          { text: '网络', link: '/www/' }
+          { text: '网络', link: '/www/' },
+	  { text: '微博', link: 'https://weibo.com/kriry?is_all=1' }
         ],
         sidebar: {
           '/langs/rust/rust/book/': book('Rust'),
