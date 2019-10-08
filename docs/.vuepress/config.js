@@ -47,37 +47,37 @@ module.exports = {
         },
         searchMaxSuggestions: 11,
         nav: [
-          { text: 'kriry.com', link: 'http://kriry.com' },
-	        { text: 'Web开发', items: [
-              	    { text: 'HTML', link: '/web/html/' },
-		                { text: 'CSS', link: '/web/css/' },
-		                { text: 'WebAPI', link: '/web/api/' },
-            ]
-          },
-          { text: '编程语言', items: [
-		  { text: 'C语言目录', link: '/langs/clang/' },
-		  { text: 'C++语言目录', link: '/langs/cpp/' },
-                  { text: 'Rust语言目录', link: '/langs/rust/' },
-                  { text: 'Ecmascript目录', link: '/langs/ecmascript/' },
-            ]
-          },
-	        { text: '数据库', items: [
-                  { text: 'PostgreSQL', link: '/dba/postgresql/' },
-		  { text: 'MongoDB', link: '/dba/mongodb/' },
-            ]
-          },
-          { text: '操作系统', items: [
-                  { text: 'Linux', link: '/os/linux/' },
-		  { text: 'Harmony', link: '/os/harmony/' },
-            ]
-          },
-	        { text: '协议', items: [
-                  { text: 'HTTP2', link: '/protocol/http2/' },
-		  { text: 'HTTP3', link: '/protocol/http3/' },
-            ]
-          },
-          { text: '网络', link: '/www/' },
-	  { text: '微博', link: 'https://weibo.com/kriry?is_all=1' }
+			  { text: 'kriry.com', link: 'http://kriry.com' },
+			  { text: 'Web开发', items: [
+				   	{ text: 'HTML', link: '/web/html/' },
+				    	{ text: 'CSS', link: '/web/css/' },
+				    	{ text: 'WebAPI', link: '/web/api/' },
+			  	    ]
+			  },
+			  { text: '编程语言', items: [
+				  	{ text: 'C语言目录', link: '/langs/clang/' },
+				  	{ text: 'C++语言目录', link: '/langs/cpp/' },
+				  	{ text: 'Rust语言目录', link: '/langs/rust/' },
+				  	{ text: 'Ecmascript目录', link: '/langs/ecmascript/' },
+			    	   ]
+			  },
+			  { text: '数据库', items: [
+				  	{ text: 'PostgreSQL', link: '/dba/postgresql/' },
+				  	{ text: 'MongoDB', link: '/dba/mongodb/' },
+			    	    ]
+			  },
+			  { text: '操作系统', items: [
+				  	{ text: 'Linux', link: '/os/linux/' },
+				  	{ text: 'Harmony', link: '/os/harmony/' },
+			    	    ]
+			  },
+			  { text: '协议', items: [
+				  	{ text: 'HTTP2', link: '/protocol/http2/' },
+				  	{ text: 'HTTP3', link: '/protocol/http3/' },
+			    	   ]
+			  },
+			  { text: '网络', link: '/www/' },
+			  { text: '微博', link: 'https://weibo.com/kriry?is_all=1' }
         ],
         sidebar: {
           '/langs/rust/rust/book/': book('Rust'),
