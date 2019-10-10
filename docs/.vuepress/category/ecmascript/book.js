@@ -24,7 +24,8 @@ exports.book_es = (title) => {
             'object/5-2.Date',
             'object/5-3.Math',
             'object/5-4.Json',
-	    'object/5-5.Regexp'
+	    'object/5-5.Regexp',
+	    'object/5-6.错误处理'
             ]
         },
 	'6.操作符',
@@ -39,6 +40,6 @@ exports.book_es = (title) => {
 	'15.Module',
 	'16.Async',
 	'17.attributes',
-	'18.错误处理'
+	'18.Strict模式'
     ]
 }
