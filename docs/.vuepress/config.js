@@ -99,7 +99,7 @@ module.exports = {
           '/langs/rust/crate/serde/': serde('Serde'),
           '/langs/rust/user/book-exp/': book_exp('book_exp'),
 
-          '/langs/clang/book/': book_c('Clang'),
+          '/langs/clang/': book_c('Clang'),
 
           '/langs/cpp/book/': book_cpp('CPP'),
 
