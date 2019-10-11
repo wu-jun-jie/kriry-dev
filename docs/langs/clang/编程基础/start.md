@@ -6,7 +6,7 @@
 
 ![1499567307190](./images/1499567307190.png)
 
-![](./images/gcc编译的四个阶段.png)
+![img](./images/gcc.png)
 
 预处理：宏替换，文件包含，条件编译
 
@@ -84,32 +84,33 @@
 #define SYSTEM Win32
 #define DEBUG
 void main(){
-  	#if SYSTEM == Win32
-  		printf("win32\n");
-  	#else
-  		printf(x64\n);
-  	#endif
+    #if SYSTEM == Win32
+        printf("win32\n");
+    #else
+        printf(x64\n);
+    #endif
 }
 
 // #ifdef
 void main(){
-  	int i = 0;
+    int i = 0;
   #ifdef DEBUG
-  	printf("i = %d\n", i);
+    printf("i = %d\n", i);
   #endif
-  	int j = 3;
+    int j = 3;
   #ifdef DEBUG
-  	printf("j = %d\n", j);
+    printf("j = %d\n", j);
 }
 
 // #ifndef
 #ifndef __FOO_H_
 #define __FOO_H_
 struct Foo{
-  	int i;
+    int i;
 };
 #endif
 ```
+
 ### 程序调试
 
 - 设置断点
@@ -119,7 +120,6 @@ struct Foo{
 - 观察变量
 - 条件断点
 - 项目调试
-
 
 ## 链接（Link）
 

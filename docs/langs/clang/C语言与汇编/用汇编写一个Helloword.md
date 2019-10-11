@@ -50,11 +50,11 @@ _start:<span style="white-space:pre">           </span># 在屏幕上显示一�
 
 把这个程序保存成文件hello.asm，然后用汇编器（Assembler）as把汇编程序中的助记符翻译成机器指令，生成目标文件hello.o，再用链接器（Linker，或Link Editor）ld把目标文件hello.o链接成可执行文件hello：
 
-![](./images/C语言与汇编13.png)
+![](./images/13.png)
 
 我们执行生产的hello程序：
 
-![](./images/C语言与汇编14.png)
+![](./images/14.png)
 
 程序中的#号表示单行注释，类似于c语言的//注释。
 

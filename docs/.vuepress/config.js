@@ -61,10 +61,10 @@ module.exports = {
 			  	    ]
 			  },
 			  { text: '编程语言', items: [
-				  	{ text: 'C语言目录', link: '/langs/clang/' },
-				  	{ text: 'C++语言目录', link: '/langs/cpp/' },
-				  	{ text: 'Rust语言目录', link: '/langs/rust/' },
-				  	{ text: 'Ecmascript目录', link: '/langs/ecmascript/' },
+				  	{ text: 'Clang', link: '/langs/clang/' },
+				  	{ text: 'C++', link: '/langs/cpp/' },
+				  	{ text: 'Rust', link: '/langs/rust/' },
+				  	{ text: 'Ecmascript', link: '/langs/ecmascript/' },
 			    	   ]
 			  },
 			  { text: '数据库', items: [

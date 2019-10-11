@@ -1,4 +1,4 @@
-### void 类型
+# void 类型
 
 万能类型，在需要时再具体指定；在描述一段还没有具体使用的内存时需要使用void类型。
 
@@ -10,6 +10,7 @@ void \* 万能指针，void \* 可以指向任何类型的数据，在32位系�
 void* malloc(size_t size)
 int *p = (int *)malloc(sizeof(int));
 ```
+
 void类型的本质
 
 ![1500220095866](./images/1500220095866.png)
@@ -18,7 +19,7 @@ void类型的本质
 
 ![1500220302522](./images/1500220302522.png)
 
-#### void的作用
+## void的作用
 
 void 真正发挥的作用在于：
 
@@ -56,7 +57,7 @@ p2 = p1;
 
 提示"=: cannot convert from void * to int * "
 
-#### void指针的作用
+## void指针的作用
 
 (1) void指针可以指向任意的数据类型，即任意类型的指针可以赋值给void指针
 
@@ -65,11 +66,12 @@ int *a;
 void *p;
 p=a;
 ```
+
 如果void指针赋值给其他类型，则需要强制转换；`a=（int *）p;`
 
 (2) 在ANSI C标准中不允许对void指针进行算术运算，因为没有特定的数据类型，即在内存中不知道移动多少个字节；而在GNU标准中，认为void指针和char指针等同。
 
-#### 应用
+### 应用
 
 (1) void指针一般用于应用的底层，比如malloc函数的返回类型是void指针，需要再强制转换		
 (2) 文件句柄HANDLE也是void指针类型，这也是句柄和指针的区别；		
@@ -79,4 +81,5 @@ p=a;
 void * memcpy (void *dest, const void *src, size_t len);
 void * memset (void *buffer, int c, size_t num );
 ```
-(4) 面向对象函数中底层对基类的抽象。
+
+(4) 面向对象函数中底层对基类的抽象

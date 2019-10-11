@@ -13,7 +13,9 @@ offsetof宏返回的是MEMBER成员在内存中的实际地址。又因为整个
 // 这个宏返回的是MEMBER元素相对于整个结构体变量的首地址的偏移量，类型是 int
 // & ((TYPE *)0)->MEMBER 等价于 & (((TYPE *)0)->MEMBER) - & (((TYPE *)0)
 ```
+
 ![1500258263590](./images/1500258263590.png)
+
 ```c
 #include <stdio.h>  
 #define offsetof(TYPE,MEMBER) ((int) &((TYPE *)0)->MEMBER)  
@@ -117,7 +119,7 @@ int main(void)
 
 运行结果为：
 
-```
+```c
 offsetof (struct test_struct,num)=0  
 offsetof (struct test_struct,ch)=4  
 offsetof (struct test_struct,f1)=8 

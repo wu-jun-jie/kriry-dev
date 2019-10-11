@@ -1,4 +1,6 @@
-### printf()详解
+# printf函数
+
+## printf()详解
 
 ```c
 #define _CRT_SECURE_NO_WARNINGS

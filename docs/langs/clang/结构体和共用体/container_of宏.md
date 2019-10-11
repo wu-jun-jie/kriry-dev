@@ -67,7 +67,7 @@ int main(void)
 
 例子输出结果： 
 
-```
+```c
 offsetof(struct test_struct, num) = 0  
 offsetof(struct test_struct,  ch) = 4  
 offsetof(struct test_struct,  fl) = 8  
@@ -131,13 +131,14 @@ int main(void)
 
 例子输出结果： 
 
-```
+```c
 test_struct->num = 99  
 test_struct->ch = C  
 test_struct->fl = 59.119999  
 ```
 
 不适当的例子，如清单3： 
+
 ```c
 /* linux-2.6.38.8/include/linux/compiler-gcc4.h */  
 #define __compiler_offsetof(a,b) __builtin_offsetof(a,b)  
@@ -184,9 +185,10 @@ int main(void)
     return 0;  
 }  
 ```
+
 例子输出结果： 
 
-```
+```c
 char_ptr = 0xbfb72d7f  test_struct = 0xbfb72d7b  
   
 test_struct->num = -1511000897  
@@ -196,7 +198,7 @@ test_struct->fl = 0.000000
 
 注意，由于这里并没有一个具体的结构体变量，所以成员num和fl的值是不确定的。
 
-### container_of 宏
+## container_of 宏
 
 ```c
 // typeof() 获取变量的数据类型
@@ -269,7 +271,8 @@ const typeof( ((struct demo_struct *)0)->member3 ) *__mptr = (memp);
 其中，typeof是GNU C对标准C的扩展，它的作用是根据变量获取变量的类型。因此，上述代码中的第2行的作用是首先使用typeof获取结构体域变量member3的类型为 type3，然后定义了一个type3指针类型的临时变量`__mptr`，并将实际结构体变量中的域变量的指针memp的值赋给临时变量`__mptr`。
 
 假设结构体变量demo在实际内存中的位置如下图所示：
-```
+
+```text
 demo
 +-------------+ 0xA000
 |   member1              |
@@ -283,18 +286,21 @@ demo
 |   member4             |
 +-------------+
 ```
+
 则，在执行了上述代码的第2行之后__mptr的值即为0xA010。
 
 再看上述代码的第3行，其中需要说明的是offsetof，它定义在include/linux/stddef.h中，其定义如下：
 
-```
+```c
 #define offsetof(TYPE, MEMBER) ((size_t) &((TYPE *)0)->MEMBER)
 ```
+
 同样，我们将上述的offsetof调用展开，即为：
 
 ```c
 (struct demo_struct *)( (char *)__mptr - ((size_t) &((struct demo_struct *)0)->member3) );
 ```
+
 可见，offsetof的实现原理就是取结构体中的域成员相对于地址0的偏移地址，也就是域成员变量相对于结构体变量首地址的偏移。
 
 因此，`offsetof(struct demo_struct, member3)`调用返回的值就是member3相对于demo变量的偏移。结合上述给出的变量地址分布图可知，`offsetof(struct demo_struct, member3)`将返回0x10。
@@ -302,4 +308,4 @@ demo
 于是，由上述分析可知，此时，`__mptr==0xA010，offsetof(struct demo_struct, member3)==0x10`。
 因此，`(char *)__mptr - ((size_t) &((struct demo_struct *)0)->member3) == 0xA010 - 0x10 == 0xA000`，也就是结构体变量demo的首地址（如上图所示）。
 
-由此，`container_of`实现了根据一个结构体变量中的一个域成员变量的指针来获取指向整个结构体变量的指针的功能。
+由此，`container_of`实现了根据一个结构体变量中的一个域成员变量的指针来获取指向整个结构体变量的指针的功能

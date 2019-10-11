@@ -1,4 +1,6 @@
-### scanf()函数详解
+# scanf函数
+
+## scanf()函数详解
 
 ```c
 #define _CRT_SECURE_NO_WARNINGS
