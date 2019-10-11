@@ -69,7 +69,7 @@ module.exports = {
 			  },
 			  { text: '数据库', items: [
 				  	{ text: 'PostgreSQL', link: '/dba/postgresql/' },
-				  	{ text: 'MongoDB', link: '/dba/mongodb/' },
+				  	{ text: 'SequoiaDB', link: '/dba/sequoiadb/' },
 			    	    ]
 			  },
 			  { text: '操作系统', items: [

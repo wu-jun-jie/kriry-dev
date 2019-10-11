@@ -2,12 +2,10 @@
 home: true
 heroImage: /imgs/kriry.png
 pageClass: front
-actionText: 现在开始
-actionLink: /kriry-dev.html
 footer: MIT Licensed | Copyright © 2019-present | kriry开发者网络
 ---
 
-<div style="margin-top: 5rem;"></div>
+<div style="margin-top: 6rem;"></div>
 
 <div id="news"><a href="https://github.com/kriry/kriry-dev" target="_black">欢迎参与 </a>共建kriry开发者网络</div>
 
@@ -29,9 +27,13 @@ footer: MIT Licensed | Copyright © 2019-present | kriry开发者网络
 ## Kriry开发者网络
 
 <div>
-<strong>Kriry开发者网络</strong> 是由开发者提供, 服务于开发者的网络资源
-</div><br>
-<div ><a href="/kriry-dev.html"><strong> 阅读更多</strong></a></div>
+<strong>Kriry开发者网络</strong> : 始于开发者, 服务于开发者的网络资源
+
+<a href="http://kriry.com" target="_black"><strong>kriry.com</strong></a> :  探索-互动网络空间
+
+<strong>声明 </strong>: 本站文档部分来源于网络,如有侵犯请你告之处理. 本站文档主要作研究学习!
+
+</div>
 
 <div class="features">
   <div class="feature">
@@ -50,7 +52,7 @@ footer: MIT Licensed | Copyright © 2019-present | kriry开发者网络
   <div class="feature">
     <button class="qzone">数据库</button><br>&nbsp;<br>&nbsp;
     <a href="/dba/postgresql/"><strong>PostgreSQL</strong></a><br>&nbsp;
-    <a href="/dba/mongodb/"><strong>Mongodb</strong></a><br>&nbsp;
+    <a href="/dba/sequoiadb/"><strong>SequoiaDB</strong></a><br>&nbsp;
   </div>
 
   <div class="feature">
