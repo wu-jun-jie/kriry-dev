@@ -2,7 +2,7 @@
 
 ## Rust语言
 
-- [The Rust Programming Language](https://doc.rust-lang.org/book/index.html) - [中文版《Rust编程语言》](/langs/rust/rust/book/) - [《The Book-学习心得》](/users/book-exp/)
+- [The Rust Programming Language](https://doc.rust-lang.org/book/index.html) - [中文版《Rust编程语言》](/langs/rust/rust/book/) - [《The Book-学习心得》](/langs/rust/user/book-exp/)
 - [The Rustonomicon](https://doc.rust-lang.org/nomicon/index.html) - [中文版 《Rust高级编程》](/langs/rust/rust/advrust/)
 - [The Rust Async-book](https://rust-lang.github.io/async-book/) - [中文版《Rust异步编程》](/langs/rust/rust/async-rust/)
 - [The Reference](https://doc.rust-lang.org/reference/index.html) - [中文版《Rust语言参考》](/langs/rust/rust/reference/)
