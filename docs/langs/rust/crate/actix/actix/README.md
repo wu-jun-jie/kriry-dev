@@ -1,6 +1,6 @@
-# [Actix-Web](https://actix.rs)
+# [Actix](https://actix.rs)
 
-> [Actix英文](https://actix.rs/) - [Actix中文](/crates/actix/) - [API文档](https://docs.rs/actix-web/) - [Github](https://github.com/actix)
+> [Actix英文](https://actix.rs/) - [Actix中文](/langs/rust/crate/actix/) - [API文档](https://docs.rs/actix/) - [Github](https://github.com/actix)
 
 Actix是一个强大的Rust的actor系统, 在它之上是actix-web框架。这是你在工作中大多使用的东西。Actix-web给你提供了一个有趣且快速的Web开发框架。
 

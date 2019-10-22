@@ -4,6 +4,7 @@ let { asyncrust } = require ('./category/rust/asyncrust.js')
 let { reference } = require ('./category/rust/reference.js')
 let { cargo } = require ('./category/rust/cargo.js')
 let { discovery } = require ('./category/rust/discovery.js')
+let { actix } = require ('./category/rust/actix.js')
 let { actixweb } = require ('./category/rust/actixweb.js')
 let { diesel } = require ('./category/rust/diesel.js')
 let { riker } = require ('./category/rust/riker.js')
@@ -93,7 +94,8 @@ module.exports = {
           '/langs/rust/rust/cargo/': cargo('Cargo'),
           '/langs/rust/rust/discovery/': discovery('Discovery'),
           '/langs/rust/crate/tokio/': tokio('Tokio'),
-          '/langs/rust/crate/actix-web/': actixweb('Actix-Web'),
+          '/langs/rust/crate/actix/actix/': actix('Actix'),
+          '/langs/rust/crate/actix/actix-web/': actixweb('Actix-Web'),
           '/langs/rust/crate/diesel/': diesel('Diesel'),
           '/langs/rust/crate/riker/': riker('Riker'),
           '/langs/rust/crate/serde/': serde('Serde'),
