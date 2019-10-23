@@ -58,7 +58,7 @@ module.exports = {
 			  { text: 'Web开发', items: [
 				   	{ text: 'HTML', link: '/web/html/' },
 				    	{ text: 'CSS', link: '/web/css/' },
-				    	{ text: 'WebAPI', link: '/web/api/' },
+				    	{ text: 'WebAPI', link: '/web/webapi/' },
 			  	    ]
 			  },
 			  { text: '编程语言', items: [
@@ -69,8 +69,7 @@ module.exports = {
 			    	   ]
 			  },
 			  { text: '数据库', items: [
-				  	{ text: 'PostgreSQL', link: '/dba/postgresql/' },
-				  	{ text: 'SequoiaDB', link: '/dba/sequoiadb/' },
+				  	{ text: 'PostgreSQL', link: '/dba/postgresql/' }
 			    	    ]
 			  },
 			  { text: '操作系统', items: [

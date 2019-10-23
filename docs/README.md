@@ -40,7 +40,7 @@ footer: MIT Licensed | Copyright © 2019-present | kriry开发者网络
     <button class="qzone">Web开发</button><br>&nbsp;<br>&nbsp;
     <a href="/web/html/" ><strong>HTML</strong></a><br>&nbsp;
     <a href="/web/css/" ><strong>CSS</strong></a><br>&nbsp;
-    <a href="/web/api/" ><strong>WebAPI</strong></a><br>&nbsp;
+    <a href="/web/webapi/" ><strong>WebAPI</strong></a><br>&nbsp;
   </div>
   <div class="feature">
     <button class="qzone">编程语言</button><br>&nbsp;<br>&nbsp;
@@ -52,7 +52,6 @@ footer: MIT Licensed | Copyright © 2019-present | kriry开发者网络
   <div class="feature">
     <button class="qzone">数据库</button><br>&nbsp;<br>&nbsp;
     <a href="/dba/postgresql/"><strong>PostgreSQL</strong></a><br>&nbsp;
-    <a href="/dba/sequoiadb/"><strong>SequoiaDB</strong></a><br>&nbsp;
   </div>
 
   <div class="feature">
