@@ -18,6 +18,9 @@ let { book_cpp } = require ('./category/cpp/book.js')
 
 let { book_es } = require ('./category/ecmascript/book.js')
 
+let { http3 } = require ('./category/protocol/http3.js')
+
+
 let { www } = require ('./category/www.js')
 
 module.exports = {
@@ -105,6 +108,8 @@ module.exports = {
           '/langs/cpp/book/': book_cpp('CPP'),
 
           '/langs/ecmascript/book/': book_es('Ecmascript'),
+          
+          '/protocol/http3/': http3('HTTP3'),
 
           '/www/': www('www')
         }
