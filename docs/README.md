@@ -7,7 +7,9 @@ footer: MIT Licensed | Copyright © 2019-present | kriry开发者网络
 
 <div style="margin-top: 6rem;"></div>
 
-<div id="news"><a href="https://github.com/kriry/kriry-dev" target="_black">欢迎参与 </a>共建kriry开发者网络</div>
+<div id="news"><a href="https://github.com/kriry/kriry-dev" target="_black">欢迎参与 </a>共建kriry开发者网络</div><hr>
+
+<div id="news">欢迎加入QQ群 : 951882729</div>
 
 <div class="features">
   <div class="feature">
