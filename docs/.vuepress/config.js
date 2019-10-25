@@ -26,7 +26,7 @@ let { www } = require ('./category/www.js')
 
 module.exports = {
     extend: '@vuepress/theme-default',
-    title: 'kriry开发者网络',
+    title: 'kriry-dev',
     description: '始于开发者, 服务于开发者的网络资源',
     head: [
       ['link', { rel: 'icon', href: `/favicon.ico` }],
@@ -59,19 +59,19 @@ module.exports = {
         searchMaxSuggestions: 11,
         nav: [
 			  { text: 'kriry.com', link: 'http://kriry.com' },
-			  { text: 'Web开发', items: [
-				   	{ text: 'HTML', link: '/web/html/' },
-				    	{ text: 'CSS', link: '/web/css/' },
-				    	{ text: 'WebAPI', link: '/web/webapi/' },
-			  	    ]
-			  },
 			  { text: '编程语言', items: [
 				  	{ text: 'Clang', link: '/langs/clang/' },
 				  	{ text: 'C++', link: '/langs/cpp/' },
 				  	{ text: 'Rust', link: '/langs/rust/' },
 				  	{ text: 'Ecmascript', link: '/langs/ecmascript/' },
 			    	   ]
-			  },
+        },
+        { text: 'Web开发', items: [
+            { text: 'HTML', link: '/web/html/' },
+            { text: 'CSS', link: '/web/css/' },
+            { text: 'WebAPI', link: '/web/webapi/' },
+            ]
+        },
 			  { text: '数据库', items: [
 				  	{ text: 'PostgreSQL', link: '/dba/postgresql/' }
 			    	    ]
@@ -85,7 +85,15 @@ module.exports = {
 				  	{ text: 'HTTP2', link: '/protocol/http2/' },
 				  	{ text: 'HTTP3', link: '/protocol/http3/' },
 			    	   ]
-			  },
+        },
+        { text: '框架', items: [
+            { text: 'Ker', link: '/framework/ker/' }
+              ]
+        },
+        { text: '工具', items: [
+            { text: 'Git', link: '/tool/git/' }
+              ]
+        },
 			  { text: '网络', link: '/www/' },
 			  { text: '微博', link: 'https://weibo.com/kriry?is_all=1' }
         ],

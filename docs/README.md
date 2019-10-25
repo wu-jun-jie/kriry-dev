@@ -2,12 +2,12 @@
 home: true
 heroImage: /imgs/kriry.png
 pageClass: front
-footer: MIT Licensed | Copyright © 2019-present | kriry开发者网络
+footer: MIT Licensed | Copyright © 2019-present | kriry-dev
 ---
 
 <div style="margin-top: 6rem;"></div>
 
-<div id="news"><a href="https://github.com/kriry/kriry-dev" target="_black">欢迎参与 </a>共建kriry开发者网络</div><hr>
+<div id="news"><a href="https://github.com/kriry/kriry-dev" target="_black">欢迎参与 </a>共建kriry-dev网络</div><hr>
 
 <div id="news">欢迎加入QQ群 : 951882729</div>
 
@@ -26,10 +26,10 @@ footer: MIT Licensed | Copyright © 2019-present | kriry开发者网络
   </div>
 </div>
 
-## Kriry开发者网络
+## kriry-dev
 
 <div>
-<strong>Kriry开发者网络</strong> : 始于开发者, 服务于开发者的网络资源
+<strong>kriry-dev</strong> : 始于开发者, 服务于开发者的网络资源
 
 <a href="http://kriry.com" target="_black"><strong>kriry.com</strong></a> :  探索-互动网络空间
 
