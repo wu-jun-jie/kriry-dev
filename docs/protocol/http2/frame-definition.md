@@ -250,32 +250,20 @@ PUSH\_PROMISE帧定义了如下标识符：
 不要求被允诺的流以他们被允诺的顺序来被使用。PUSH\_PROMISE帧只保留用于以后的流标识符。
 
 
-> PUSH\_PROMISE MUST NOT be sent if the SETTINGS\_ENABLE\_PUSH setting of the peer endpoint is set to 0. An endpoint that has set this setting and has received acknowledgement MUST treat the receipt of a PUSH\_PROMISE frame as a connection error ([Section 5.4.1](http://httpwg.org/specs/rfc7540.html#ConnectionErrorHandler)) of type [PROTOCOL_ERROR](http://httpwg.org/specs/rfc7540.html#PROTOCOL_ERROR).
-
 如果对端的SETTINGS\_ENABLE\_PUSH被设置为0，不能发送PUSH\_PROMISE帧。如果一端已经设置了该设置项，并且收到了确认，当它收到了PUSH\_PROMISE帧时，必须将其当做类型为 [PROTOCOL\_ERROR](http://httpwg.org/specs/rfc7540.html#PROTOCOL_ERROR) 的连接错误( [5.4.1节](http://httpwg.org/specs/rfc7540.html#ConnectionErrorHandler) )。
 
-
-> Recipients of PUSH\_PROMISE frames can choose to reject promised streams by returning a [RST\_STREAM](http://httpwg.org/specs/rfc7540.html#PROTOCOL_ERROR) referencing the promised stream identifier back to the sender of the PUSH_PROMISE.
 
 PUSH\_PROMISE帧的接收方可以通过给PUSH\_PROMISE帧的发送方返回一个 [RST\_STREAM](http://httpwg.org/specs/rfc7540.html#PROTOCOL_ERROR) 帧来选择拒绝被允诺的流，该RST\_STREAM帧包含被允诺的流的标识符。
 
 
-> A PUSH\_PROMISE frame modifies the connection state in two ways. First, the inclusion of a header block ([Section 4.3](http://httpwg.org/specs/rfc7540.html#HeaderBlock)) potentially modifies the state maintained for header compression. Second, PUSH\_PROMISE also reserves a stream for later use, causing the promised stream to enter the "reserved" state. A sender MUST NOT send a PUSH_PROMISE on a stream unless that stream is either "open" or "half-closed (remote)"; the sender MUST ensure that the promised stream is a valid choice for a new stream identifier ([Section 5.1.1](http://httpwg.org/specs/rfc7540.html#StreamIdentifiers)) (that is, the promised stream MUST be in the "idle" state).
-
 PUSH\_PROMISE帧有两种方式来修改连接状态。首先，包含一个首部块( [4.3节](http://httpwg.org/specs/rfc7540.html#HeaderBlock) )会潜在地修改为首部压缩维护的状态。其次，PUSH\_PROMISE帧也会为以后的使用保留一个流，从而使被允诺的流进入 保留(reserved) 状态。只有当流处于 打开(open) 或者 半关闭(远端)(half-closed (remote)) 状态时，发送方才能在该流上发送PUSH\_PROMISE帧；发送方必须确保被允诺的流对一个新的流标识符([ 5.1.1节](http://httpwg.org/specs/rfc7540.html#StreamIdentifiers) )是有效的(即，被允诺的流必须处于 空闲(idle) 状态)。
 
-
-> Since PUSH\_PROMISE reserves a stream, ignoring a PUSH\_PROMISE frame causes the stream state to become indeterminate. A receiver MUST treat the receipt of a PUSH\_PROMISE on a stream that is neither "open" nor "half-closed (local)" as a connection error ([Section 5.4.1](http://httpwg.org/specs/rfc7540.html#ConnectionErrorHandler)) of type [PROTOCOL\_ERROR](http://httpwg.org/specs/rfc7540.html#PROTOCOL_ERROR). However, an endpoint that has sent [RST\_STREAM](http://httpwg.org/specs/rfc7540.html#RST_STREAM) on the associated stream MUST handle PUSH_PROMISE frames that might have been created before the [RST\_STREAM](http://httpwg.org/specs/rfc7540.html#RST_STREAM) frame is received and processed.
 
 因为PUSH\_PROMISE帧会保留一个流，所以忽略PUSH\_PROMISE帧会导致该流的状态变成不确定的。如果在既不是 打开(open) 也不是 半关闭(half-closed(local)) 状态的流上收到了PUSH\_PROMISE帧，接收方必须将其当做类型为 [PROTOCOL\_ERROR](http://httpwg.org/specs/rfc7540.html#PROTOCOL_ERROR) 的连接错误( [5.4.1节](http://httpwg.org/specs/rfc7540.html#ConnectionErrorHandler) )。但是，在关联流上发送了 [RST\_STREAM](http://httpwg.org/specs/rfc7540.html#RST_STREAM) 帧的端点必须能处理PUSH\_PROMISE帧，该PUSH\_PROMISE帧可能在收到并处理 [RST\_STREAM](http://httpwg.org/specs/rfc7540.html#RST_STREAM) 帧之前就已经被创建了。
 
 
-> A receiver MUST treat the receipt of a PUSH\_PROMISE that promises an illegal stream identifier ([Section 5.1.1](http://httpwg.org/specs/rfc7540.html#StreamIdentifiers)) as a connection error ([Section 5.4.1](http://httpwg.org/specs/rfc7540.html#ConnectionErrorHandler)) of type [PROTOCOL\_ERROR](http://httpwg.org/specs/rfc7540.html#PROTOCOL_ERROR). Note that an illegal stream identifier is an identifier for a stream that is not currently in the "idle" state.
-
 如果接收端收到允诺了一个非法的流标识符( [5.1.1节](http://httpwg.org/specs/rfc7540.html#StreamIdentifiers) )的PUSH\_PROMISE帧，必须将其当做类型为 [PROTOCOL\_ERROR](http://httpwg.org/specs/rfc7540.html#PROTOCOL_ERROR) 的连接错误( [5.4.1节](http://httpwg.org/specs/rfc7540.html#ConnectionErrorHandler) )。注意，非法的流标识符是当前状态不是 空闲(idle) 状态的流的标识符。
 
-
-> The PUSH\_PROMISE frame can include padding. Padding fields and flags are identical to those defined for DATA frames ([Section 6.1](http://httpwg.org/specs/rfc7540.html#DATA)).
 
 PUSH\_PROMISE帧可以包含填充数据。填充数据域和标识符跟为DATA帧( [6.1节](http://httpwg.org/specs/rfc7540.html#DATA) )定义的相同。
 
