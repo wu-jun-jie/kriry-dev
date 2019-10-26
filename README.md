@@ -15,8 +15,8 @@
 1. Fork 并克隆本仓库：
 
     ```bash
-    $ git clone https://github.com/<YOUR_GITHUB_ID>/kriry-dev
-    $ cd kriry-dev
+    $ git clone https://github.com/<YOUR_GITHUB_ID>/kriry-tech
+    $ cd kriry-tech
     $ npm install
     ```
 
