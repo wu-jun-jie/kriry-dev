@@ -26,7 +26,7 @@ footer: MIT Licensed | Copyright © 2019-present | kriry技术
   </div>
 </div>
 
-## kriry-dev
+## kriry技术
 
 <div>
 <strong>kriry技术</strong> : 始于开发者, 服务于开发者的网络资源
