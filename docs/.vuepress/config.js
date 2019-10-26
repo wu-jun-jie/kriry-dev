@@ -26,7 +26,7 @@ let { www } = require ('./category/www.js')
 
 module.exports = {
     extend: '@vuepress/theme-default',
-    title: 'kriry-dev',
+    title: 'kriry技术',
     description: '始于开发者, 服务于开发者的网络资源',
     head: [
       ['link', { rel: 'icon', href: `/favicon.ico` }],
@@ -44,7 +44,7 @@ module.exports = {
       'vuepress-plugin-baidu-autopush': {}
     },
     themeConfig: {
-        repo: 'kriry/kriry-dev',
+        repo: 'kriry/kriry-tech',
         docsDir: 'docs',
         logo: '/imgs/kriry-logo.png',
         displayAllHeaders: true,
