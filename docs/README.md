@@ -13,7 +13,7 @@ footer: MIT Licensed | Copyright © 2019-present | kriry-dev
 
 <div class="features">
   <div class="feature">
-    <button class="topic"><a href="https://weibo.com/kriry?is_all=1" >微博:kriry</a></button>
+    <button class="topic"><a href="https://weibo.com/kriry?is_all=1" target="_black">微博:kriry</a></button>
     <p><a href="https://weibo.com/kriry?is_all=1" ><strong>kriry动态关注订阅</strong></a></p>
   </div>
   <div class="feature">
