@@ -1,8 +1,8 @@
-# [kriry-dev](https://dev.kriry.com) [![Build Status](https://dev.azure.com/kriry/kriry-dev/_apis/build/status/kriry.kriry-dev?branchName=master)](https://dev.azure.com/kriry/kriry-dev/_build/latest?definitionId=2&branchName=master)
+# [kriry技术](https://dev.kriry.com) [![Build Status](https://dev.azure.com/kriry/kriry-dev/_apis/build/status/kriry.kriry-dev?branchName=master)](https://dev.azure.com/kriry/kriry-dev/_build/latest?definitionId=2&branchName=master)
 
-## 欢迎参与 kriry-dev
+## 欢迎参与 kriry技术
 
-> 因为本仓库的修改会自动发布到 [**kriry-dev**](https://dev.kriry.com/) 网站，请参与时遵循以下步骤，并确保构建为成功状态。
+> 因为本仓库的修改会自动发布到 [**kriry技术**](https://dev.kriry.com/) 网站，请参与时遵循以下步骤，并确保构建为成功状态。
 
 ### A. 参与文档
 
