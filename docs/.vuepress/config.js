@@ -44,7 +44,7 @@ module.exports = {
       'vuepress-plugin-baidu-autopush': {}
     },
     themeConfig: {
-        repo: 'kriry/kriry-tech',
+        repo: 'kriry/kriry-dev',
         docsDir: 'docs',
         logo: '/imgs/kriry-logo.png',
         displayAllHeaders: true,
