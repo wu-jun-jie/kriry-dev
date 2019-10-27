@@ -87,7 +87,8 @@ module.exports = {
 			    	   ]
         },
         { text: '框架', items: [
-            { text: 'Ker', link: '/framework/ker/' }
+            { text: 'LLVM', link: '/framework/llvm/' },
+            { text: 'React技术', link: '/framework/react/' },
               ]
         },
         { text: '工具', items: [

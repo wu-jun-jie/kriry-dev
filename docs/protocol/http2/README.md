@@ -13,5 +13,3 @@
 * IANA Considerations
 * References
 * A. TLS 1.2 Cipher Suite Black List
-* Acknowledgements
-* Authors' Addresses
