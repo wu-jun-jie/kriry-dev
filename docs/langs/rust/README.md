@@ -5,6 +5,7 @@
 - [官方](官方)
 - [生态](#生态)
 - [用户](#用户)
+- [Awesome-Rust](/www/rust/resource.html)
 
 ## 官方
 

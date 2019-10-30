@@ -3,19 +3,19 @@
 ## Rust官方
 
 * [Rust-lang]( https://www.rust-lang.org  )
-* [Rust-Doc](https://dev.kriry.com/langs/rust/)
+* [Rust-Doc](/langs/rust/)
 * [Rust Forge](https://forge.rust-lang.org/)
 * [Rust Github](https://github.com/rust-lang)
 
 ## Awesome
 
 - [Awesome-Rust](https://github.com/rust-unofficial/awesome-rust/blob/master/README.md)
-- [Awesome-Crates](https://dev.kriry.com/www/rust/crates.html)
-- [Awesome-Wasm](https://dev.kriry.com/www/rust/wasm.html)
-- [Awesome-IOT](https://dev.kriry.com/www/rust/iot.html)
-- [Awesome-Server](https://dev.kriry.com/www/rust/server.html)
-- [Awesome-Actix](https://dev.kriry.com/www/rust/actix.html)
-- [Awesome-Tokio](https://dev.kriry.com/www/rust/tokio.html)
+- [Awesome-Crates](/www/rust/crates.html)
+- [Awesome-Wasm](/www/rust/wasm.html)
+- [Awesome-IOT](/www/rust/iot.html)
+- [Awesome-Server](/www/rust/server.html)
+- [Awesome-Actix](/www/rust/actix.html)
+- [Awesome-Tokio](/www/rust/tokio.html)
 
 ## Rust语言
 
@@ -30,7 +30,7 @@
 
 ## 书籍
 
-* [**Rust语言书录**](https://dev.kriry.com/langs/rust/)
+* [**Rust语言书录**](/langs/rust/)
 * [中文Rust By Example](https://rustwiki.org/zh-CN/rust-by-example/index.html)
 
 ## 视频

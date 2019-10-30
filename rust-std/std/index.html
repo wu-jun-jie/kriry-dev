@@ -17,14 +17,42 @@
 </noscript>
 <link rel="shortcut icon" href="../favicon1.38.0.ico">
 <style type="text/css">
+@media (max-width: 700px) {
+		#kriy-link .kriry-item {
+			margin-right:  1.4rem;
+			background-color:azure;
+			padding: 0.1rem;border-radius: 5%;
+		}
+		#kriy-link a {
+			font-size:1.4rem;
+			color:blue;
+		}
+}
+@media (min-width: 701px) {
+		#kriy-link {
+			margin-left: 14rem; 
+		}
+		#kriy-link .kriry-item {
+			margin-right: 2.4rem;
+			background-color:azure;
+			padding: 0.1rem;border-radius: 5%;
+		}
+		#kriy-link a {
+			font-size:1.5rem;
+			color:blue;
+		}
+}
 #crate-search{background-image:url("../down-arrow1.38.0.svg");}
 </style>
 </head>
 <body class="rustdoc mod">
+
+	
+
 <!--[if lte IE 8]>
 <div class="warning">
 	This old browser is unsupported and will most likely display funky things.
-</div>
+</div>bold
 <![endif]--><nav class="sidebar">
 <div class="sidebar-menu">
 	&#9776;
@@ -51,7 +79,7 @@
 	<div class="block items">
 		<ul>
 			<li><a href="#reexports">重导出</a></li>
-			<li><a href="#primitives">原声类型</a></li>
+			<li><a href="#primitives">原生类型</a></li>
 			<li><a href="#modules">模块</a></li>
 			<li><a href="#macros">宏</a></li>
 			<li><a href="#keywords">关键词</a></li>
@@ -75,13 +103,19 @@
 			<select id="crate-search">
 				<option value="All crates">全部</option>
 			</select>
-			<input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search">
+			<input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="点击或按“ S”进行搜索，按“？”以获取更多选项…" type="search">
 		</div>
 		<a id="settings-menu" href="../settings.html"><img src="../wheel1.38.0.svg" width="18" alt="Change settings"></a>
 	</div>
 </form>
-</nav><section id="main" class="content">
-<h1 class='fqn'><span class='out-of-band'><span class='since' title='Stable since Rust version 1.0.0'>1.0.0</span><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/std/lib.rs.html#1-571' title='goto source code'>[src]</a></span><span class='in-band'><a class="mod" href=''>Std库</a>&emsp;<a href="https://dev.kriry.com/" target="_black" style="font-weight: bold; color:green;">kriry技术</a></span></h1>
+</nav>
+<div id="kriy-link" >
+		<span class="kriry-item"><a href="https://dev.kriry.com/" target="_black">kriry技术</a></span>
+		<span class="kriry-item"><a href="https://dev.kriry.com/www/rust/resource.html" target="_black" >Awesome</a></span>
+		<span class="kriry-item"><a href="http://kriry.com/" target="_black" >kriry.com</a></span>
+</div>
+<section id="main" class="content">
+<h1 class='fqn'><span class='out-of-band'><span class='since' title='Stable since Rust version 1.0.0'>1.0.0</span><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../src/std/lib.rs.html#1-571' title='goto source code'>[src]</a></span><span class='in-band'><a class="mod" href=''>Std库</a></h1>
 <div class='docblock'>
 	<h1 id="the-rust-standard-library" class="section-header"><a href="#the-rust-standard-library">Rust标准库</a></h1>
 	<p>
@@ -105,7 +139,7 @@
 	</p>
 	<ul>
 		<li><a href="#modules"><code>std::*</code> 模块</a></li>
-		<li><a href="#primitives">原声类型</a></li>
+		<li><a href="#primitives">原生类型</a></li>
 		<li><a href="#macros">标准宏</a></li>
 		<li><a href="prelude/index.html">Rust前导</a></li>
 	</ul>
@@ -122,16 +156,11 @@
 	<h1 id="what-is-in-the-standard-library-documentation" class="section-header"><a href="#what-is-in-the-standard-library-documentation">标准库文档中有什么？</a></h1>
 	<p>
             首先，Rust标准库分为多个重点模块, 
-		<a href="#modules">all listed further down this page</a>. These modules are
-the bedrock upon which all of Rust is forged, and they have mighty names
-like 
-		<a href="slice/index.html"><code>std::slice</code></a> and <a href="cmp/index.html"><code>std::cmp</code></a>. Modules' documentation typically
-includes an overview of the module along with examples, and are a smart
-place to start familiarizing yourself with the library.
+		<a href="#modules">所有内容都在此页面的下方列出</a>. 这些模块是所有Rus构造t的基石，, 它们的名称很强大，例如 
+		<a href="slice/index.html"><code>std::slice</code></a> 和 <a href="cmp/index.html"><code>std::cmp</code></a>. 模块的文档通常包括模块概述和示例，是开始熟悉该库的明智之地.
 	</p>
 	<p>
-		Second, implicit methods on <a href="https://doc.rust-lang.org/book/ch03-02-data-types.html">primitive types</a> are documented here. This can
-be a source of confusion for two reasons:
+		其次，此处记录了 <a href="https://doc.rust-lang.org/book/ch03-02-data-types.html">原生类型</a> 的隐式方法. 造成混淆的原因有两个：
 	</p>
 	<ol>
 		<li>While primitives are implemented by the compiler, the standard library
