@@ -28,7 +28,7 @@
 
 - **标准库**
 
-  - [The Rust StdAPI Doc](https://doc.rust-lang.org/std/index.html) - [中文《Rust标准库》](/langs/rust/rust/rust-std/std)
+  - [The Rust StdAPI Doc](https://doc.rust-lang.org/std/index.html) - [中文《Rust标准库》](https://dev.kriry.com/langs/rust/rust/rust-std/std)
 
 - **Crates**
 
