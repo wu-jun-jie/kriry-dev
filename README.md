@@ -1,4 +1,6 @@
-# [kriry技术](https://dev.kriry.com) [![Build Status](https://dev.azure.com/kriry/kriry-dev/_apis/build/status/kriry.kriry-dev?branchName=master)](https://dev.azure.com/kriry/kriry-dev/_build/latest?definitionId=2&branchName=master)
+# kriry技术  [![Build Status](https://dev.azure.com/kriry/kriry-dev/_apis/build/status/kriry.kriry-dev?branchName=master)](https://dev.azure.com/kriry/kriry-dev/_build/latest?definitionId=2&branchName=master)
+
+> 赞助-支持  [**如何赞助, 有何收获**](https://dev.kriry.com/funding.html)
 
 ## 欢迎参与 kriry技术
 
@@ -34,7 +36,3 @@
 
 4. Push 到你的 GitHub 仓库，然后提交 PR 到本仓库。
 
-### 赞助-支持
-
-
-[**如何赞助, 有何收获**](https://dev.kriry.com/funding.html)
