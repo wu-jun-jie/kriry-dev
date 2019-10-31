@@ -166,123 +166,95 @@
 		</li>
 	</ol>
 	<p>
-		So for example there is a <a href="primitive.i32.html">page for the primitive type
-		<code>i32</code></a> that lists all the methods that can be called on
-32-bit integers (very useful), and there is a 
-		<a href="i32/index.html">page for the module
-		<code>std::i32</code></a> that documents the constant values <a href="i32/constant.MIN.html"><code>MIN</code></a> and
-		<a href="i32/constant.MAX.html"><code>MAX</code></a> (rarely useful).
+			因此，例如 有一个<a href="primitive.i32.html">原始类型
+		<code>i32</code></a> 页面 , 列出了可以在32位整数上调用的所有方法 (非常有用), 而有一个模块
+		<a href="i32/index.html">
+		<code>std::i32</code></a> 页面, 记录了常量值 <a href="i32/constant.MIN.html"><code>MIN</code></a> 和
+		<a href="i32/constant.MAX.html"><code>MAX</code></a>  (非常有用).
 	</p>
 	<p>
-		Note the documentation for the primitives <a href="primitive.str.html"><code>str</code></a> and <a href="primitive.slice.html"><code>[T]</code></a> (also
-called 'slice'). Many method calls on 
-		<a href="string/struct.String.html"><code>String</code></a> and <a href="vec/index.html"><code>Vec&lt;T&gt;</code></a> are actually
-calls to methods on 
-		<a href="primitive.str.html"><code>str</code></a> and <a href="primitive.slice.html"><code>[T]</code></a> respectively, via <a href="https://doc.rust-lang.org/book/ch15-02-deref.html#implicit-deref-coercions-with-functions-and-methods">deref
-coercions
-		</a>.
+			请注意原生<a href="primitive.str.html"><code>str</code></a> 和 <a href="primitive.slice.html"><code>[T]</code></a> (也称为 "切片" )的文档.
+			通过<a href="https://doc.rust-lang.org/book/ch15-02-deref.html#implicit-deref-coercions-with-functions-and-methods">deref</a>.强制，
+			对<a href="string/struct.String.html"><code>String</code></a> 和 <a href="vec/index.html"><code>Vec&lt;T&gt;</code></a> 的许多方法调用实际上分别是对
+		<a href="primitive.str.html"><code>str</code></a> 和 <a href="primitive.slice.html"><code>[T]</code></a> 上的方法的调用.
 	</p>
 	<p>
-		Third, the standard library defines <a href="prelude/index.html">The Rust Prelude</a>, a small collection
-of items - mostly traits - that are imported into every module of every
-crate. The traits in the prelude are pervasive, making the prelude
-documentation a good entry point to learning about the library.
+			第三，标准库定义了 <a href="prelude/index.html">Rust前导</a>, 这是一小部分项(主要是特质)的集合- 
+			这些项被导入到每个 Crate 的每个模块中。前导中的特质无处不在，这使t前导文档成为学习标准库的一个很好的切入点
 	</p>
 	<p>
-		And finally, the standard library exports a number of standard macros, and
-		<a href="#macros">lists them on this page</a> (technically, not all of the standard
-macros are defined by the standard library - some are defined by the
-compiler - but they are documented here the same). Like the prelude, the
-standard macros are imported by default into all crates.
+			最后，标准库导出许多标准宏，并在 <a href="#macros">此页上列出它们</a> (从技术上讲，并非所有标准宏都由标准库定义-有些是由编译器定义的，但与此处记录的内容相同)
+			像前导一样，默认情况下，标准宏会导入所有 Crate 中
 	</p>
 	<h1 id="contributing-changes-to-the-documentation" class="section-header"><a href="#contributing-changes-to-the-documentation">对文档进行更改</a></h1>
 	<p>
-		Check out the rust contribution guidelines <a href="https://github.com/rust-lang/rust/blob/master/CONTRIBUTING.md">here</a>.
-The source for this documentation can be found on 
-		<a href="https://github.com/rust-lang">Github</a>.
-To contribute changes, make sure you read the guidelines first, then submit
-pull-requests for your suggested changes.
+			在<a href="https://github.com/rust-lang/rust/blob/master/CONTRIBUTING.md">此处</a>查看Rust贡献准则。
+			该文档的源代码可以在<a href="https://github.com/rust-lang">Github</a>上找到。要做出更改，请确保您先阅读准则，然后提交建议更改的请求。
 	</p>
 	<p>
-		Contributions are appreciated! If you see a part of the docs that can be
-improved, submit a PR, or chat with us first on irc.mozilla.org #rust-docs.
+			感谢您的贡献！如果您发现文档中的一部分可以改进，请提交PR, 或首先在irc.mozilla.org＃rust-docs上与我们交流.
 	</p>
 	<h1 id="a-tour-of-the-rust-standard-library" class="section-header"><a href="#a-tour-of-the-rust-standard-library">Rust标准库之旅</a></h1>
 	<p>
-		The rest of this crate documentation is dedicated to pointing out notable
-features of The Rust Standard Library.
+			本文档的其余部分专用于说明Rust标准库的显着功能。
 	</p>
 	<h2 id="containers-and-collections" class="section-header"><a href="#containers-and-collections">容器和集合</a></h2>
 	<p>
-		The <a href="option/index.html"><code>option</code></a> and <a href="result/index.html"><code>result</code></a> modules define optional and error-handling
-types, 
-		<a href="option/enum.Option.html"><code>Option&lt;T&gt;</code></a> and <a href="result/enum.Result.html"><code>Result&lt;T, E&gt;</code></a>. The <a href="iter/index.html"><code>iter</code></a> module defines
-Rust's iterator trait, 
-		<a href="iter/trait.Iterator.html"><code>Iterator</code></a>, which works with the <a href="https://doc.rust-lang.org/book/ch03-05-control-flow.html#looping-through-a-collection-with-for"><code>for</code></a> loop to
-access collections.
+		<a href="option/index.html"><code>option</code></a> 和 <a href="result/index.html"><code>result</code></a> 模块定义可选和错误处理的类型 : 
+		<a href="option/enum.Option.html"><code>Option&lt;T&gt;</code></a> 和 <a href="result/enum.Result.html"><code>Result&lt;T, E&gt;</code></a>.  <a href="iter/index.html"><code>iter</code></a> 模块定义Rust的迭代器特质
+		<a href="iter/trait.Iterator.html"><code>Iterator</code></a>,  与<a href="https://doc.rust-lang.org/book/ch03-05-control-flow.html#looping-through-a-collection-with-for"><code>for</code></a> 循环一起使用以访问集合.
 	</p>
 	<p>
-		The standard library exposes three common ways to deal with contiguous
-regions of memory:
+			标准库公开了三种处理内存连续区域的常用方法：
 	</p>
 	<ul>
-		<li><a href="vec/index.html"><code>Vec&lt;T&gt;</code></a> - A heap-allocated <em>vector</em> that is resizable at runtime.</li>
-		<li><a href="primitive.array.html"><code>[T; n]</code></a> - An inline <em>array</em> with a fixed size at compile time.</li>
-		<li><a href="primitive.slice.html"><code>[T]</code></a> - A dynamically sized <em>slice</em> into any other kind of contiguous
-storage, whether heap-allocated or not.
+		<li><a href="vec/index.html"><code>Vec&lt;T&gt;</code></a> - 在运行时可调整大小的堆分配<em>向量/vector</em></li>
+		<li><a href="primitive.array.html"><code>[T; n]</code></a> - 在编译时具有固定大小的内联数组</li>
+		<li><a href="primitive.slice.html"><code>[T]</code></a> - 具有容纳动态大小切片的任何类型连续存储, 无论是否进行堆分配
 		</li>
 	</ul>
 	<p>
-		Slices can only be handled through some kind of <em>pointer</em>, and as such come
-in many flavors such as:
+			切片只能通过某种<em>指针</em>来处理，因此有多种形式，例如：
 	</p>
 	<ul>
-		<li><code>&amp;[T]</code> - <em>shared slice</em></li>
-		<li><code>&amp;mut [T]</code> - <em>mutable slice</em></li>
-		<li><a href="boxed/index.html"><code>Box&lt;[T]&gt;</code></a> - <em>owned slice</em></li>
+		<li><code>&amp;[T]</code> - <em>共享切片</em></li>
+		<li><code>&amp;mut [T]</code> - <em>可变切片</em></li>
+		<li><a href="boxed/index.html"><code>Box&lt;[T]&gt;</code></a> - <em>拥有切片</em></li>
 	</ul>
 	<p>
-		<a href="primitive.str.html"><code>str</code></a>, a UTF-8 string slice, is a primitive type, and the standard library
-defines many methods for it. Rust 
-		<a href="primitive.str.html"><code>str</code></a>s are typically accessed as
-immutable references: 
-		<code>&amp;str</code>. Use the owned <a href="string/struct.String.html"><code>String</code></a> for building and
-mutating strings.
+		<a href="primitive.str.html"><code>str</code></a>, UTF-8字符串切片是一种原始类型, 标准库为此定义了许多方法. Rust 
+		<a href="primitive.str.html"><code>str</code></a>通常被当作不可变的引用: <code>&amp;str</code>来访问
+		. 使用拥有/owned <a href="string/struct.String.html"><code>String</code></a>来构造和可变字符串
 	</p>
 	<p>
-		For converting to strings use the <a href="macro.format.html"><code>format!</code></a> macro, and for converting from
-strings use the 
-		<a href="str/trait.FromStr.html"><code>FromStr</code></a> trait.
+			要转换为字符串，请使用 <a href="macro.format.html"><code>format!</code></a> 宏；要从字符串转换，请使用
+		<a href="str/trait.FromStr.html"><code>FromStr</code></a> 特质.
 	</p>
 	<p>
-		Data may be shared by placing it in a reference-counted box or the <a href="rc/index.html"><code>Rc</code></a>
-type, and if further contained in a 
-		<a href="cell/struct.Cell.html"><code>Cell</code></a> or <a href="cell/struct.RefCell.html"><code>RefCell</code></a>, may be mutated
-as well as shared. Likewise, in a concurrent setting it is common to pair an
+			可以通过将数据放在引用计数的 box 或 <a href="rc/index.html"><code>Rc</code></a>
+		类型中来共享数据, 如果进一步包含在 
+		<a href="cell/struct.Cell.html"><code>Cell</code></a> 或  <a href="cell/struct.RefCell.html"><code>RefCell</code></a>,则可以对其进行突变和共享. Likewise, in a concurrent setting it is common to pair an
 atomically-reference-counted box, 
 		<a href="sync/struct.Arc.html"><code>Arc</code></a>, with a <a href="sync/struct.Mutex.html"><code>Mutex</code></a> to get the same
 effect.
 	</p>
 	<p>
-		The <a href="collections/index.html"><code>collections</code></a> module defines maps, sets, linked lists and other
-typical collection types, including the common 
+					该<a href="collections/index.html"><code>collections</code></a> 模块定义了 maps , sets , linked lists 和其他典型的集合类型，包括
 		<a href="collections/struct.HashMap.html"><code>HashMap&lt;K, V&gt;</code></a>.
 	</p>
 	<h2 id="platform-abstractions-and-io" class="section-header"><a href="#platform-abstractions-and-io">平台抽象和 I/O</a></h2>
 	<p>
-		Besides basic data types, the standard library is largely concerned with
-abstracting over differences in common platforms, most notably Windows and
-Unix derivatives.
+			除了基本数据类型外，标准库还主要关注常见平台（尤其是Windows和Unix派生）中的差异的抽象
 	</p>
 	<p>
-		Common types of I/O, including <a href="fs/struct.File.html">files</a>, <a href="net/struct.TcpStream.html">TCP</a>, <a href="net/struct.UdpSocket.html">UDP</a>, are defined in the
-		<a href="io/index.html"><code>io</code></a>, <a href="fs/index.html"><code>fs</code></a>, and <a href="net/index.html"><code>net</code></a> modules.
+			常见类型的 I/O, 包括 <a href="fs/struct.File.html">files</a>, <a href="net/struct.TcpStream.html">TCP</a>, <a href="net/struct.UdpSocket.html">UDP</a>, 在被定义在
+		<a href="io/index.html"><code>io</code></a>, <a href="fs/index.html"><code>fs</code></a>, 和 <a href="net/index.html"><code>net</code></a> 模块.
 	</p>
 	<p>
-		The <a href="thread/index.html"><code>thread</code></a> module contains Rust's threading abstractions. <a href="sync/index.html"><code>sync</code></a>
-contains further primitive shared memory types, including 
-		<a href="sync/atomic/index.html"><code>atomic</code></a> and
-		<a href="sync/mpsc/index.html"><code>mpsc</code></a>, which contains the channel types for message passing.
+			该 <a href="thread/index.html"><code>thread</code></a> 模块包含Rust的线程抽象. <a href="sync/index.html"><code>sync</code></a>
+			进一步包含其他原始共享内存类型, 包括 
+		<a href="sync/atomic/index.html"><code>atomic</code></a> 和
+		<a href="sync/mpsc/index.html"><code>mpsc</code></a>, 其中包含用于消息传递的通道类型.
 	</p>
 </div>
 <h2 id='reexports' class='section-header'><a href="#reexports">重导出</a></h2>
@@ -575,9 +547,7 @@ contains further primitive shared memory types, including
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Implementations of things like <code>Eq</code> for fixed-length arrays
-up to a certain length. Eventually we should able to generalize
-to all lengths.
+				定长数组的 <code>Eq</code> 之类的实现. 限制到一定长度。 最终我们应该能够扩展到所有长度。
 		</p>
 	</td>
 </tr>
