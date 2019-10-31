@@ -79,7 +79,7 @@
 			<li><a href="#primitives">原生类型</a></li>
 			<li><a href="#modules">模块</a></li>
 			<li><a href="#macros">宏</a></li>
-			<li><a href="#keywords">关键词</a></li>
+			<li><a href="#keywords">关键字</a></li>
 		</ul>
 	</div>
 	<p class='location'>
@@ -195,7 +195,7 @@ macros are defined by the standard library - some are defined by the
 compiler - but they are documented here the same). Like the prelude, the
 standard macros are imported by default into all crates.
 	</p>
-	<h1 id="contributing-changes-to-the-documentation" class="section-header"><a href="#contributing-changes-to-the-documentation">Contributing changes to the documentation</a></h1>
+	<h1 id="contributing-changes-to-the-documentation" class="section-header"><a href="#contributing-changes-to-the-documentation">对文档进行更改</a></h1>
 	<p>
 		Check out the rust contribution guidelines <a href="https://github.com/rust-lang/rust/blob/master/CONTRIBUTING.md">here</a>.
 The source for this documentation can be found on 
@@ -207,12 +207,12 @@ pull-requests for your suggested changes.
 		Contributions are appreciated! If you see a part of the docs that can be
 improved, submit a PR, or chat with us first on irc.mozilla.org #rust-docs.
 	</p>
-	<h1 id="a-tour-of-the-rust-standard-library" class="section-header"><a href="#a-tour-of-the-rust-standard-library">A Tour of The Rust Standard Library</a></h1>
+	<h1 id="a-tour-of-the-rust-standard-library" class="section-header"><a href="#a-tour-of-the-rust-standard-library">Rust标准库之旅</a></h1>
 	<p>
 		The rest of this crate documentation is dedicated to pointing out notable
 features of The Rust Standard Library.
 	</p>
-	<h2 id="containers-and-collections" class="section-header"><a href="#containers-and-collections">Containers and collections</a></h2>
+	<h2 id="containers-and-collections" class="section-header"><a href="#containers-and-collections">容器和集合</a></h2>
 	<p>
 		The <a href="option/index.html"><code>option</code></a> and <a href="result/index.html"><code>result</code></a> modules define optional and error-handling
 types, 
@@ -268,7 +268,7 @@ effect.
 typical collection types, including the common 
 		<a href="collections/struct.HashMap.html"><code>HashMap&lt;K, V&gt;</code></a>.
 	</p>
-	<h2 id="platform-abstractions-and-io" class="section-header"><a href="#platform-abstractions-and-io">Platform abstractions and I/O</a></h2>
+	<h2 id="platform-abstractions-and-io" class="section-header"><a href="#platform-abstractions-and-io">平台抽象和 I/O</a></h2>
 	<p>
 		Besides basic data types, the standard library is largely concerned with
 abstracting over differences in common platforms, most notably Windows and
@@ -285,7 +285,7 @@ contains further primitive shared memory types, including
 		<a href="sync/mpsc/index.html"><code>mpsc</code></a>, which contains the channel types for message passing.
 	</p>
 </div>
-<h2 id='reexports' class='section-header'><a href="#reexports">Re-exports</a></h2>
+<h2 id='reexports' class='section-header'><a href="#reexports">重导出</a></h2>
 <table>
 <tr>
 	<td>
@@ -293,7 +293,7 @@ contains further primitive shared memory types, including
 	</td>
 </tr>
 </table>
-<h2 id='primitives' class='section-header'><a href="#primitives">Primitive Types</a></h2>
+<h2 id='primitives' class='section-header'><a href="#primitives">原生类型</a></h2>
 <table>
 <tr class='module-item'>
 	<td>
@@ -301,9 +301,7 @@ contains further primitive shared memory types, including
 	</td>
 	<td class='docblock-short'>
 		<p>
-			A fixed-size array, denoted <code>[T; N]</code>, for the element type, <code>T</code>, and the
-non-negative compile-time constant size, 
-			<code>N</code>.
+				一个固定大小的数组, 表示为<code>[T; N]</code>，即元素类型<code>T</code>, 和非负编译时常量<code>N</code>。
 		</p>
 	</td>
 </tr>
@@ -313,7 +311,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The boolean type.
+				布尔类型
 		</p>
 	</td>
 </tr>
@@ -323,7 +321,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			A character type.
+				字符类型
 		</p>
 	</td>
 </tr>
@@ -333,7 +331,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The 32-bit floating point type.
+				32位浮点类型
 		</p>
 	</td>
 </tr>
@@ -343,7 +341,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The 64-bit floating point type.
+				64位浮点类型
 		</p>
 	</td>
 </tr>
@@ -353,7 +351,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Function pointers, like <code>fn(usize) -&gt; bool</code>.
+				函数指针，如 <code>fn(usize) -&gt; bool</code>
 		</p>
 	</td>
 </tr>
@@ -363,7 +361,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The 8-bit signed integer type.
+				8位带符号整数类型
 		</p>
 	</td>
 </tr>
@@ -373,7 +371,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The 16-bit signed integer type.
+			16位带符号整数类型
 		</p>
 	</td>
 </tr>
@@ -383,7 +381,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The 32-bit signed integer type.
+				32位带符号整数类型
 		</p>
 	</td>
 </tr>
@@ -393,7 +391,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The 64-bit signed integer type.
+				64位带符号整数类型
 		</p>
 	</td>
 </tr>
@@ -403,7 +401,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The 128-bit signed integer type.
+				128位带符号整数类型
 		</p>
 	</td>
 </tr>
@@ -413,7 +411,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The pointer-sized signed integer type.
+				指针大小的有符号整数类型
 		</p>
 	</td>
 </tr>
@@ -423,7 +421,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Raw, unsafe pointers, <code>*const T</code>, and <code>*mut T</code>.
+				原始的，不安全的指针<code>*const T</code>, 和 <code>*mut T</code>
 		</p>
 	</td>
 </tr>
@@ -433,7 +431,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			References, both shared and mutable.
+				共享和可变引用
 		</p>
 	</td>
 </tr>
@@ -443,7 +441,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			A dynamically-sized view into a contiguous sequence, <code>[T]</code>.
+				具有动态尺寸视图的连续序列<code>[T]</code>
 		</p>
 	</td>
 </tr>
@@ -453,7 +451,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			String slices.
+				字符切片
 		</p>
 	</td>
 </tr>
@@ -463,7 +461,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			A finite heterogeneous sequence, <code>(T, U, ..)</code>.
+				有限的异构序列<code>(T, U, ..)</code>
 		</p>
 	</td>
 </tr>
@@ -473,7 +471,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The 8-bit unsigned integer type.
+				8位无符号整数类型
 		</p>
 	</td>
 </tr>
@@ -483,7 +481,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The 16-bit unsigned integer type.
+				16位无符号整数类型
 		</p>
 	</td>
 </tr>
@@ -493,7 +491,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The 32-bit unsigned integer type.
+				32位无符号整数类型
 		</p>
 	</td>
 </tr>
@@ -503,7 +501,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The 64-bit unsigned integer type.
+				64位无符号整数类型
 		</p>
 	</td>
 </tr>
@@ -513,7 +511,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The 128-bit unsigned integer type.
+				128位无符号整数类型
 		</p>
 	</td>
 </tr>
@@ -523,7 +521,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The <code>()</code> type, sometimes called &quot;unit&quot; or &quot;nil&quot;.
+				<code>()</code>类型，有时被称为&quot;单元&quot; 或 &quot;无&quot;
 		</p>
 	</td>
 </tr>
@@ -533,7 +531,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The pointer-sized unsigned integer type.
+				指针大小的无符号整数类型
 		</p>
 	</td>
 </tr>
@@ -542,14 +540,14 @@ non-negative compile-time constant size,
 		<a class="primitive" href="primitive.never.html" title='std::never primitive'>never</a>
 	</td>
 	<td class='docblock-short'>
-		<span class="stab unstable">Experimental</span>
+		<span class="stab unstable">实验性</span>
 		<p>
-			The <code>!</code> type, also called &quot;never&quot;.
+				 <code>!</code>类型，也被称为&quot;永不&quot;
 		</p>
 	</td>
 </tr>
 </table>
-<h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<h2 id='modules' class='section-header'><a href="#modules">模块</a></h2>
 <table>
 <tr class='module-item'>
 	<td>
@@ -557,7 +555,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Memory allocation APIs
+				内存分配API
 		</p>
 	</td>
 </tr>
@@ -567,9 +565,7 @@ non-negative compile-time constant size,
 	</td>
 	<td class='docblock-short'>
 		<p>
-			This module implements the <code>Any</code> trait, which enables dynamic typing
-of any 
-			<code>'static</code> type through runtime reflection.
+				该模块实现了<code>Any</code>特质，该特质允许通过运行时反射来动态键入任何<code>'static</code> 类型
 		</p>
 	</td>
 </tr>
@@ -591,7 +587,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Operations on ASCII strings and characters.
+				ASCII字符串和字符的操作
 		</p>
 	</td>
 </tr>
@@ -601,7 +597,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			A module for working with borrowed data.
+				用于处理借入(borrowed)数据的模块
 		</p>
 	</td>
 </tr>
@@ -611,7 +607,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			A pointer type for heap allocation.
+				堆分配的指针类型
 		</p>
 	</td>
 </tr>
@@ -621,7 +617,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Shareable mutable containers.
+				共享可变容器
 		</p>
 	</td>
 </tr>
@@ -631,7 +627,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			A character type.
+				字符类型
 		</p>
 	</td>
 </tr>
@@ -641,7 +637,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The <code>Clone</code> trait for types that cannot be 'implicitly copied'.
+				无法隐式复制类型的<code>Clone</code>特质
 		</p>
 	</td>
 </tr>
@@ -651,7 +647,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Functionality for ordering and comparison.
+				排序和比较的功能
 		</p>
 	</td>
 </tr>
@@ -661,7 +657,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Collection types.
+				集合类型
 		</p>
 	</td>
 </tr>
@@ -671,7 +667,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Traits for conversions between types.
+				类型之间转换的特质
 		</p>
 	</td>
 </tr>
@@ -681,7 +677,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			The <code>Default</code> trait for types which may have meaningful default values.
+				类型的默认值可能具有意义的<code>Default</code>特质
 		</p>
 	</td>
 </tr>
@@ -691,7 +687,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Inspection and manipulation of the process's environment.
+				检查和管理进程的环境
 		</p>
 	</td>
 </tr>
@@ -701,7 +697,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Traits for working with Errors.
+				处理错误的特质
 		</p>
 	</td>
 </tr>
@@ -711,9 +707,7 @@ to all lengths.
 	</td>
 	<td class='docblock-short'>
 		<p>
-			This module provides constants which are specific to the implementation
-of the 
-			<code>f32</code> floating point data type.
+				该模块提供特定于<code>f32</code>浮点数据类型实现的常量 
 		</p>
 	</td>
 </tr>
@@ -723,9 +717,7 @@ of the
 	</td>
 	<td class='docblock-short'>
 		<p>
-			This module provides constants which are specific to the implementation
-of the 
-			<code>f64</code> floating point data type.
+				该模块提供特定于<code>f64</code>浮点数据类型实现的常量 
 		</p>
 	</td>
 </tr>
@@ -735,7 +727,7 @@ of the
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Utilities related to FFI bindings.
+				FFI绑定有关的实用工具
 		</p>
 	</td>
 </tr>
@@ -745,7 +737,7 @@ of the
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Utilities for formatting and printing <code>String</code>s.
+				格式化和打印 <code>String</code>的实用工具
 		</p>
 	</td>
 </tr>
@@ -755,7 +747,7 @@ of the
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Filesystem manipulation operations.
+				文件系统管理操作
 		</p>
 	</td>
 </tr>
@@ -765,7 +757,7 @@ of the
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Asynchronous values.
+				异步值
 		</p>
 	</td>
 </tr>
@@ -775,7 +767,7 @@ of the
 	</td>
 	<td class='docblock-short'>
 		<p>
-			Generic hashing support.
+				通用哈希支持
 		</p>
 	</td>
 </tr>
@@ -1184,7 +1176,7 @@ Counted'.
 	</td>
 </tr>
 </table>
-<h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
+<h2 id='macros' class='section-header'><a href="#macros">宏</a></h2>
 <table>
 <tr class='module-item'>
 	<td>
@@ -1706,7 +1698,7 @@ than
 	</td>
 </tr>
 </table>
-<h2 id='keywords' class='section-header'><a href="#keywords">Keywords</a></h2>
+<h2 id='keywords' class='section-header'><a href="#keywords">关键字</a></h2>
 <table>
 <tr class='module-item'>
 	<td>
