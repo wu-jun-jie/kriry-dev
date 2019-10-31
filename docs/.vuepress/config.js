@@ -96,8 +96,8 @@ module.exports = {
 			      ]
 			},
 			 { text: '网络', link: '/www/' },
-			 { text: '微博', link: 'https://weibo.com/kriry?is_all=1' }
-			 { text: '赞助', link: '/funding.html' },
+			 { text: '微博', link: 'https://weibo.com/kriry?is_all=1' },
+			 { text: '赞助', link: '/funding.html' }
         ],
         sidebar: {
           '/langs/rust/rust/book/': book('Rust'),
