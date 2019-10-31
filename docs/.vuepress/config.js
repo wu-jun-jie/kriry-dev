@@ -58,45 +58,46 @@ module.exports = {
         },
         searchMaxSuggestions: 11,
         nav: [
-			  { text: 'kriry.com', link: 'http://kriry.com' },
-			  { text: '编程语言', items: [
+			 { text: 'kriry.com', link: 'http://kriry.com' },
+			 { text: '编程语言', items: [
 				  	{ text: 'Clang', link: '/langs/clang/' },
 				  	{ text: 'C++', link: '/langs/cpp/' },
 				  	{ text: 'Rust', link: '/langs/rust/' },
 				  	{ text: 'Ecmascript', link: '/langs/ecmascript/' },
 			    	   ]
-        },
-        { text: 'Web开发', items: [
-            { text: 'HTML', link: '/web/html/' },
-            { text: 'CSS', link: '/web/css/' },
-            { text: 'WebAPI', link: '/web/webapi/' },
-            ]
-        },
-			  { text: '数据库', items: [
-				  	{ text: 'PostgreSQL', link: '/dba/postgresql/' }
-			    	    ]
-			  },
-			  { text: '操作系统', items: [
-				  	{ text: 'Linux', link: '/os/linux/' },
-				  	{ text: 'Harmony', link: '/os/harmony/' },
-			    	    ]
-			  },
-			  { text: '协议', items: [
-				  	{ text: 'HTTP2', link: '/protocol/http2/' },
-				  	{ text: 'HTTP3', link: '/protocol/http3/' },
-			    	   ]
-        },
-        { text: '框架', items: [
-            { text: 'LLVM', link: '/framework/llvm/' },
-            { text: 'React技术', link: '/framework/react/' },
-              ]
-        },
-        { text: '工具', items: [
-            { text: 'Git', link: '/tool/git/' }
-              ]
-        },
-			  { text: '网络', link: '/www/' },
-			  { text: '微博', link: 'https://weibo.com/kriry?is_all=1' }
+			},
+			{ text: 'Web开发', items: [
+			    { text: 'HTML', link: '/web/html/' },
+			    { text: 'CSS', link: '/web/css/' },
+			    { text: 'WebAPI', link: '/web/webapi/' },
+			    ]
+			},
+					  { text: '数据库', items: [
+							{ text: 'PostgreSQL', link: '/dba/postgresql/' }
+						    ]
+					  },
+					  { text: '操作系统', items: [
+							{ text: 'Linux', link: '/os/linux/' },
+							{ text: 'Harmony', link: '/os/harmony/' },
+						    ]
+					  },
+					  { text: '协议', items: [
+							{ text: 'HTTP2', link: '/protocol/http2/' },
+							{ text: 'HTTP3', link: '/protocol/http3/' },
+						   ]
+			},
+			{ text: '框架', items: [
+			    { text: 'LLVM', link: '/framework/llvm/' },
+			    { text: 'React技术', link: '/framework/react/' },
+			      ]
+			},
+			{ text: '工具', items: [
+			    { text: 'Git', link: '/tool/git/' }
+			      ]
+			},
+			 { text: '网络', link: '/www/' },
+			 { text: '微博', link: 'https://weibo.com/kriry?is_all=1' }
+			 { text: '赞助', link: '/funding.html' },
         ],
         sidebar: {
           '/langs/rust/rust/book/': book('Rust'),
