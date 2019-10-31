@@ -36,6 +36,5 @@
 
 ### 赞助-支持
 
-> **感恩每一份赞助与支持**
 
-[如何赞助, 有何收获](https://dev.kriry.com/funding.html)
+[**如何赞助, 有何收获**](https://dev.kriry.com/funding.html)
