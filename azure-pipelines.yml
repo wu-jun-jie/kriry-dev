@@ -25,7 +25,7 @@ steps:
       
       cp CNAME docs/.vuepress/dist
 
-      cp -R rust-std docs/.vuepress/dist/langs/rust/rust
+      cp -R www/rust-std docs/.vuepress/dist/langs/rust
 
       git clone https://github.com/davisp/ghp-import.git &&
       ./ghp-import/ghp_import.py -n -p -f -m "Documentation upload" -b master -r https://$(krirydev)@github.com/kriry/kriry.github.io.git docs/.vuepress/dist &&
