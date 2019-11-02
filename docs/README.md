@@ -49,6 +49,7 @@ footer: MIT Licensed | Copyright © 2019-present | kriry技术
     <a href="/langs/clang/" ><strong>Clang</strong></a><br>&nbsp;
     <a href="/langs/cpp/" ><strong>C++</strong></a><br>&nbsp;
     <a href="/langs/rust/" ><strong>Rust</strong></a><br>&nbsp;
+    <a href="/langs/java/" ><strong>Java</strong></a><br>&nbsp;
     <a href="/langs/ecmascript/" ><strong>Ecmascript</strong></a><br>&nbsp;
   </div>
   <div class="feature">
