@@ -2,7 +2,7 @@
 
 ## 指南目录
 
-- [官方](官方)
+- [官方](#官方)
 - [生态](#生态)
 - [用户](#用户)
 - [Awesome-Rust](/www/rust/resource.html)
@@ -29,7 +29,7 @@
 
 - **标准库**
 
-  - [The Rust StdAPI Doc](https://doc.rust-lang.org/std/index.html) - [中文《Rust标准库》](https://dev.kriry.com/langs/rust/rust-std/std)
+  - [The Rust StdAPI Doc](https://doc.rust-lang.org/std/index.html) - [中文《Rust标准库》](https://dev.kriry.com/www/rust-std/std)
 
 - **Crates**
 
