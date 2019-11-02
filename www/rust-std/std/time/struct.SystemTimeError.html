@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="utf-8">
@@ -28,18 +28,18 @@
         <div class="sidebar-menu">&#9776;</div><a href='../../std/index.html'>
             <div class='logo-container'><img src='../../rust-logo1.38.0.png' alt='logo'></div>
         </a>
-        <p class='location'>Struct SystemTimeError</p>
+        <p class='location'>结构体 SystemTimeError</p>
         <div class="sidebar-elems">
-            <div class="block items"><a class="sidebar-title" href="#methods">Methods</a>
+            <div class="block items"><a class="sidebar-title" href="#methods">方法</a>
                 <div class="sidebar-links"><a href="#method.duration">duration</a></div><a class="sidebar-title"
-                    href="#implementations">Trait Implementations</a>
+                    href="#implementations">实现的特质</a>
                 <div class="sidebar-links"><a href="#impl-Clone">Clone</a><a href="#impl-Debug">Debug</a><a
                         href="#impl-Display">Display</a><a href="#impl-Error">Error</a></div><a class="sidebar-title"
-                    href="#synthetic-implementations">Auto Trait Implementations</a>
+                    href="#synthetic-implementations">自动实现的特质</a>
                 <div class="sidebar-links"><a href="#impl-RefUnwindSafe">RefUnwindSafe</a><a
                         href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a><a href="#impl-Unpin">Unpin</a><a
                         href="#impl-UnwindSafe">UnwindSafe</a></div><a class="sidebar-title"
-                    href="#blanket-implementations">Blanket Implementations</a>
+                    href="#blanket-implementations">地毯式实现</a>
                 <div class="sidebar-links"><a href="#impl-Any">Any</a><a
                         href="#impl-Borrow%3CT%3E">Borrow&lt;T&gt;</a><a
                         href="#impl-BorrowMut%3CT%3E">BorrowMut&lt;T&gt;</a><a
@@ -62,7 +62,7 @@
         <form class="search-form js-only">
             <div class="search-container">
                 <div><select id="crate-search">
-                        <option value="All crates">All crates</option>
+                        <option value="All crates">全部包</option>
                     </select><input class="search-input" name="search" autocomplete="off" spellcheck="false"
                         placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><a
                     id="settings-menu" href="../../settings.html"><img src="../../wheel1.38.0.svg" width="18"
@@ -76,16 +76,16 @@
                         href="javascript:void(0)" title="collapse all docs">[<span
                             class='inner'>&#x2212;</span>]</a></span><a class='srclink'
                     href='../../src/std/time.rs.html#141' title='goto source code'>[src]</a></span><span
-                class='in-band'>Struct <a href='../index.html'>std</a>::<wbr><a href='index.html'>time</a>::<wbr><a
+                class='in-band'>结构体 <a href='../index.html'>std</a>::<wbr><a href='index.html'>time</a>::<wbr><a
                     class="struct" href=''>SystemTimeError</a></span></h1>
         <div class="docblock type-decl hidden-by-usual-hider">
             <pre class='rust struct'>pub struct SystemTimeError(_);</pre>
         </div>
         <div class='docblock'>
-            <p>An error returned from the <code>duration_since</code> and <code>elapsed</code> methods on
-                <code>SystemTime</code>, used to learn how far in the opposite direction a system time
-                lies.</p>
-            <h1 id="examples" class="section-header"><a href="#examples">Examples</a></h1>
+            <p>一种从 <code>SystemTime</code> 的 <code>duration_since</code> 和 <code>elapsed</code>
+                方法返回的错误。用来表示系统时间在反方向上走了多远。
+            </p>
+            <h1 id="examples" class="section-header"><a href="#examples">例子</a></h1>
             <div class="example-wrap">
                 <pre class="rust rust-example-rendered">
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">thread</span>::<span class="ident">sleep</span>;
@@ -100,7 +100,7 @@
 }<a class="test-arrow" target="_blank" href="https://play.rust-lang.org/?code=%23!%5Ballow(unused)%5D%0Afn%20main()%20%7B%0Ause%20std%3A%3Athread%3A%3Asleep%3B%0Ause%20std%3A%3Atime%3A%3A%7BDuration%2C%20SystemTime%7D%3B%0A%0Alet%20sys_time%20%3D%20SystemTime%3A%3Anow()%3B%0Asleep(Duration%3A%3Afrom_secs(1))%3B%0Alet%20new_sys_time%20%3D%20SystemTime%3A%3Anow()%3B%0Amatch%20sys_time.duration_since(new_sys_time)%20%7B%0A%20%20%20%20Ok(_)%20%3D%3E%20%7B%7D%0A%20%20%20%20Err(e)%20%3D%3E%20println!(%22SystemTimeError%20difference%3A%20%7B%3A%3F%7D%22%2C%20e.duration())%2C%0A%7D%0A%7D&amp;edition=2018">Run</a></pre>
             </div>
         </div>
-        <h2 id='methods' class='small-section-header'>Methods<a href='#methods' class='anchor'></a></h2>
+        <h2 id='methods' class='small-section-header'>方法<a href='#methods' class='anchor'></a></h2>
         <h3 id='impl' class='impl'><code
                 class='in-band'>impl <a class="struct" href="../../std/time/struct.SystemTimeError.html" title="struct std::time::SystemTimeError">SystemTimeError</a></code><a
                 href='#impl' class='anchor'></a><a class='srclink' href='../../src/std/time.rs.html#551-581'
@@ -110,15 +110,11 @@
                     id='duration.v'>pub fn <a href='#method.duration' class='fnname'>duration</a>(&amp;self) -&gt; <a class="struct" href="../../std/time/struct.Duration.html" title="struct std::time::Duration">Duration</a></code><a
                     class='srclink' href='../../src/std/time.rs.html#578-580' title='goto source code'>[src]</a></h4>
             <div class='docblock'>
-                <p>Returns the positive duration which represents how far forward the
-                    second system time was from the first.</p>
-                <p>A <code>SystemTimeError</code> is returned from the <a
+                <p>返回代表第二个系统时间到第一个系统时间经过的，正的时间段。</p>
+                <p><code>SystemTimeError</code> 是从 <a href="../../std/time/struct.SystemTime.html"><code>SystemTime</code></a> 的 <a
                         href="../../std/time/struct.SystemTime.html#method.duration_since"><code>duration_since</code></a>
-                    and <a href="../../std/time/struct.SystemTime.html#method.elapsed"><code>elapsed</code></a>
-                    methods of <a href="../../std/time/struct.SystemTime.html"><code>SystemTime</code></a> whenever the
-                    second system time represents a point later
-                    in time than the <code>self</code> of the method call.</p>
-                <h1 id="examples-1" class="section-header"><a href="#examples-1">Examples</a></h1>
+                    或者 <a href="../../std/time/struct.SystemTime.html#method.elapsed"><code>elapsed</code></a> 方法，在第二个系统时间比调用方法的 <code>self</code> 更晚的时候，返回的错误。</p>
+                <h1 id="examples-1" class="section-header"><a href="#examples-1">例子</a></h1>
                 <div class="example-wrap">
                     <pre class="rust rust-example-rendered">
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">thread</span>::<span class="ident">sleep</span>;
