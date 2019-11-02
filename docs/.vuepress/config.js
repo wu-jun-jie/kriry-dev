@@ -62,7 +62,8 @@ module.exports = {
 			 { text: '编程语言', items: [
 				  	{ text: 'Clang', link: '/langs/clang/' },
 				  	{ text: 'C++', link: '/langs/cpp/' },
-				  	{ text: 'Rust', link: '/langs/rust/' },
+            { text: 'Rust', link: '/langs/rust/' },
+            { text: 'Java', link: '/langs/java/' },
 				  	{ text: 'Ecmascript', link: '/langs/ecmascript/' },
 			    	   ]
 			},
