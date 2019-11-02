@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="utf-8">
@@ -28,13 +28,13 @@
         <div class="sidebar-menu">&#9776;</div><a href='../../std/index.html'>
             <div class='logo-container'><img src='../../rust-logo1.38.0.png' alt='logo'></div>
         </a>
-        <p class='location'>Struct SystemTime</p>
+        <p class='location'>结构体 SystemTime</p>
         <div class="sidebar-elems">
-            <div class="block items"><a class="sidebar-title" href="#methods">Methods</a>
+            <div class="block items"><a class="sidebar-title" href="#methods">方法</a>
                 <div class="sidebar-links"><a href="#method.checked_add">checked_add</a><a
                         href="#method.checked_sub">checked_sub</a><a href="#method.duration_since">duration_since</a><a
                         href="#method.elapsed">elapsed</a><a href="#method.now">now</a></div><a class="sidebar-title"
-                    href="#implementations">Trait Implementations</a>
+                    href="#implementations">实现的特质</a>
                 <div class="sidebar-links"><a href="#impl-Add%3CDuration%3E">Add&lt;Duration&gt;</a><a
                         href="#impl-AddAssign%3CDuration%3E">AddAssign&lt;Duration&gt;</a><a
                         href="#impl-Clone">Clone</a><a href="#impl-Copy">Copy</a><a href="#impl-Debug">Debug</a><a
@@ -43,11 +43,11 @@
                         href="#impl-PartialOrd%3CSystemTime%3E">PartialOrd&lt;SystemTime&gt;</a><a
                         href="#impl-Sub%3CDuration%3E">Sub&lt;Duration&gt;</a><a
                         href="#impl-SubAssign%3CDuration%3E">SubAssign&lt;Duration&gt;</a></div><a class="sidebar-title"
-                    href="#synthetic-implementations">Auto Trait Implementations</a>
+                    href="#synthetic-implementations">自动实现的特质</a>
                 <div class="sidebar-links"><a href="#impl-RefUnwindSafe">RefUnwindSafe</a><a
                         href="#impl-Send">Send</a><a href="#impl-Sync">Sync</a><a href="#impl-Unpin">Unpin</a><a
                         href="#impl-UnwindSafe">UnwindSafe</a></div><a class="sidebar-title"
-                    href="#blanket-implementations">Blanket Implementations</a>
+                    href="#blanket-implementations">地毯式实现</a>
                 <div class="sidebar-links"><a href="#impl-Any">Any</a><a
                         href="#impl-Borrow%3CT%3E">Borrow&lt;T&gt;</a><a
                         href="#impl-BorrowMut%3CT%3E">BorrowMut&lt;T&gt;</a><a
@@ -69,7 +69,7 @@
         <form class="search-form js-only">
             <div class="search-container">
                 <div><select id="crate-search">
-                        <option value="All crates">All crates</option>
+                        <option value="All crates">全部</option>
                     </select><input class="search-input" name="search" autocomplete="off" spellcheck="false"
                         placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"></div><a
                     id="settings-menu" href="../../settings.html"><img src="../../wheel1.38.0.svg" width="18"
@@ -83,34 +83,25 @@
                         href="javascript:void(0)" title="collapse all docs">[<span
                             class='inner'>&#x2212;</span>]</a></span><a class='srclink'
                     href='../../src/std/time.rs.html#119' title='goto source code'>[src]</a></span><span
-                class='in-band'>Struct <a href='../index.html'>std</a>::<wbr><a href='index.html'>time</a>::<wbr><a
+                class='in-band'>结构体 <a href='../index.html'>std</a>::<wbr><a href='index.html'>time</a>::<wbr><a
                     class="struct" href=''>SystemTime</a></span></h1>
         <div class="docblock type-decl hidden-by-usual-hider">
             <pre class='rust struct'>pub struct SystemTime(_);</pre>
         </div>
         <div class='docblock'>
-            <p>A measurement of the system clock, useful for talking to
-                external entities like the file system or other processes.</p>
-            <p>Distinct from the <a href="../../std/time/struct.Instant.html"><code>Instant</code></a> type, this time
-                measurement <strong>is not
-                    monotonic</strong>. This means that you can save a file to the file system, then
-                save another file to the file system, <strong>and the second file has a
-                    <code>SystemTime</code> measurement earlier than the first</strong>. In other words, an
-                operation that happens after another operation in real time may have an
-                earlier <code>SystemTime</code>!</p>
-            <p>Consequently, comparing two <code>SystemTime</code> instances to learn about the
-                duration between them returns a <a href="../../std/result/enum.Result.html"><code>Result</code></a>
-                instead of an infallible <a href="../../std/time/struct.Duration.html"><code>Duration</code></a>
-                to indicate that this sort of time drift may happen and needs to be handled.</p>
-            <p>Although a <code>SystemTime</code> cannot be directly inspected, the <a
+            <p>一种对系统时钟的量化，在跟外部实体，例如文件系统或者其他进程通信的时候很有用。</p>
+            <p>与 <a href="../../std/time/struct.Instant.html"><code>Instant</code></a>
+                类型不同，这个时间<strong>不是单调的</strong>。也就是说你可以在文件系统里保存一个文件，再保存另一个文件，然而<strong>第二个文件的
+                    <code>SystemTime</code> 比第一个早</strong>。换句话说，现实时间中比较晚发生的操作，可能有更早的<code>SystemTime</code>！</p>
+            <p>因此，比较两个 <code>SystemTime</code> 实例，获得它们之间时间间距的时候，得到的不是一个可靠的 <a
+                    href="../../std/time/struct.Duration.html"><code>Duration</code></a>，而是一个 <a
+                    href="../../std/result/enum.Result.html"><code>Result</code></a>，这表示需要要处理可能发生的时间漂移。</p>
+            <p>虽然 <code>SystemTime</code> 没法直接检视，但是这个模块提供了 <a
                     href="../../std/time/constant.UNIX_EPOCH.html"><code>UNIX_EPOCH</code></a>
-                constant is provided in this module as an anchor in time to learn
-                information about a <code>SystemTime</code>. By calculating the duration from this
-                fixed point in time, a <code>SystemTime</code> can be converted to a human-readable time,
-                or perhaps some other string representation.</p>
-            <p>The size of a <code>SystemTime</code> struct may vary depending on the target operating
-                system.</p>
-            <p>Example:</p>
+                作为时间锚点，可以用以了解一个 <code>SystemTime</code>。通过计算到这个固定时间点的时间间隔， <code>SystemTime</code>
+                可以转换成人类可读的时间，或者一些时间的字符串表示。</p>
+            <p><code>SystemTime</code> 结构体所占的大小可能根据操作系统不同而变化。</p>
+            <p>例如：</p>
 
             <div class="example-wrap">
                 <pre class="rust rust-example-rendered">
@@ -120,22 +111,22 @@
 <span class="kw">fn</span> <span class="ident">main</span>() {
    <span class="kw">let</span> <span class="ident">now</span> <span class="op">=</span> <span class="ident">SystemTime</span>::<span class="ident">now</span>();
 
-   <span class="comment">// we sleep for 2 seconds</span>
+   <span class="comment">// 休眠 2 秒</span>
    <span class="ident">sleep</span>(<span class="ident">Duration</span>::<span class="ident">new</span>(<span class="number">2</span>, <span class="number">0</span>));
    <span class="kw">match</span> <span class="ident">now</span>.<span class="ident">elapsed</span>() {
        <span class="prelude-val">Ok</span>(<span class="ident">elapsed</span>) <span class="op">=&gt;</span> {
-           <span class="comment">// it prints &#39;2&#39;</span>
+           <span class="comment">// 打印 &#39;2&#39;</span>
            <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{}&quot;</span>, <span class="ident">elapsed</span>.<span class="ident">as_secs</span>());
        }
        <span class="prelude-val">Err</span>(<span class="ident">e</span>) <span class="op">=&gt;</span> {
-           <span class="comment">// an error occurred!</span>
+           <span class="comment">// 发生了一个错误！</span>
            <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;Error: {:?}&quot;</span>, <span class="ident">e</span>);
        }
    }
 }<a class="test-arrow" target="_blank" href="https://play.rust-lang.org/?code=%23!%5Ballow(unused)%5D%0Ause%20std%3A%3Atime%3A%3A%7BDuration%2C%20SystemTime%7D%3B%0Ause%20std%3A%3Athread%3A%3Asleep%3B%0A%0Afn%20main()%20%7B%0A%20%20%20let%20now%20%3D%20SystemTime%3A%3Anow()%3B%0A%0A%20%20%20%2F%2F%20we%20sleep%20for%202%20seconds%0A%20%20%20sleep(Duration%3A%3Anew(2%2C%200))%3B%0A%20%20%20match%20now.elapsed()%20%7B%0A%20%20%20%20%20%20%20Ok(elapsed)%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20it%20prints%20'2'%0A%20%20%20%20%20%20%20%20%20%20%20println!(%22%7B%7D%22%2C%20elapsed.as_secs())%3B%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20Err(e)%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%2F%2F%20an%20error%20occurred!%0A%20%20%20%20%20%20%20%20%20%20%20println!(%22Error%3A%20%7B%3A%3F%7D%22%2C%20e)%3B%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D&amp;edition=2018">Run</a></pre>
             </div>
         </div>
-        <h2 id='methods' class='small-section-header'>Methods<a href='#methods' class='anchor'></a></h2>
+        <h2 id='methods' class='small-section-header'>方法<a href='#methods' class='anchor'></a></h2>
         <h3 id='impl' class='impl'><code
                 class='in-band'>impl <a class="struct" href="../../std/time/struct.SystemTime.html" title="struct std::time::SystemTime">SystemTime</a></code><a
                 href='#impl' class='anchor'></a><a class='srclink' href='../../src/std/time.rs.html#357-478'
@@ -146,14 +137,11 @@
                     class='since' title='Stable since Rust version 1.28.0'>1.28.0</span><a class='srclink'
                     href='../../src/std/time.rs.html#378' title='goto source code'>[src]</a></h4>
             <div class='docblock'>
-                <p>An anchor in time which can be used to create new <code>SystemTime</code> instances or
-                    learn about where in time a <code>SystemTime</code> lies.</p>
-                <p>This constant is defined to be &quot;1970-01-01 00:00:00 UTC&quot; on all systems with
-                    respect to the system clock. Using <code>duration_since</code> on an existing
-                    <code>SystemTime</code> instance can tell how far away from this point in time a
-                    measurement lies, and using <code>UNIX_EPOCH + duration</code> can be used to create a
-                    <code>SystemTime</code> instance to represent another fixed point in time.</p>
-                <h1 id="examples" class="section-header"><a href="#examples">Examples</a></h1>
+                <p> 用来创建 <code>SystemTime</code> 的一个时间锚点，也用来了解一个 <code>SystemTime</code> 落在什么时间上。</p>
+                <p>这个常量，在所有的系统上都定义为参照系统时钟的 “1970-01-01 00:00:00 UTC”。在一个现存的 <code>SystemTime</code> 对象上用
+                    <code>duration_since</code> 可以看出到此时间点有多远。<code>UNIX_EPOCH + duration</code> 可以创建
+                    <code>SystemTime</code> 实例，来表达另一个固定的时间点。</p>
+                <h1 id="examples" class="section-header"><a href="#examples">例子</a></h1>
                 <div class="example-wrap">
                     <pre class="rust rust-example-rendered">
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">time</span>::<span class="ident">SystemTime</span>;
@@ -168,8 +156,8 @@
                     id='now.v'>pub fn <a href='#method.now' class='fnname'>now</a>() -&gt; <a class="struct" href="../../std/time/struct.SystemTime.html" title="struct std::time::SystemTime">SystemTime</a></code><a
                     class='srclink' href='../../src/std/time.rs.html#390-392' title='goto source code'>[src]</a></h4>
             <div class='docblock'>
-                <p>Returns the system time corresponding to &quot;now&quot;.</p>
-                <h1 id="examples-1" class="section-header"><a href="#examples-1">Examples</a></h1>
+                <p>返回对应现在（now）的系统时间。</p>
+                <h1 id="examples-1" class="section-header"><a href="#examples-1">例子</a></h1>
                 <div class="example-wrap">
                     <pre class="rust rust-example-rendered">
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">time</span>::<span class="ident">SystemTime</span>;
@@ -181,21 +169,17 @@
                     id='duration_since.v'>pub fn <a href='#method.duration_since' class='fnname'>duration_since</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;earlier: <a class="struct" href="../../std/time/struct.SystemTime.html" title="struct std::time::SystemTime">SystemTime</a><br>) -&gt; <a class="enum" href="../../std/result/enum.Result.html" title="enum std::result::Result">Result</a>&lt;<a class="struct" href="../../std/time/struct.Duration.html" title="struct std::time::Duration">Duration</a>, <a class="struct" href="../../std/time/struct.SystemTimeError.html" title="struct std::time::SystemTimeError">SystemTimeError</a>&gt;</code><a
                     class='srclink' href='../../src/std/time.rs.html#423-426' title='goto source code'>[src]</a></h4>
             <div class='docblock'>
-                <p>Returns the amount of time elapsed from an earlier point in time.</p>
-                <p>This function may fail because measurements taken earlier are not
-                    guaranteed to always be before later measurements (due to anomalies such
-                    as the system clock being adjusted either forwards or backwards).
-                    <a href="../../std/time/struct.Instant.html"><code>Instant</code></a> can be used to measure elapsed
-                    time without this risk of failure.</p>
-                <p>If successful, <a
-                        href="../../std/result/enum.Result.html#variant.Ok"><code>Ok</code></a><code>(</code><a
-                        href="../../std/time/struct.Duration.html"><code>Duration</code></a><code>)</code> is returned
-                    where the duration represents
-                    the amount of time elapsed from the specified measurement to this one.</p>
-                <p>Returns an <a href="../../std/result/enum.Result.html#variant.Err"><code>Err</code></a> if
-                    <code>earlier</code> is later than <code>self</code>, and the error
-                    contains how far from <code>self</code> the time is.</p>
-                <h1 id="examples-2" class="section-header"><a href="#examples-2">Examples</a></h1>
+                <p>返回从先前的一个时间点开始，经过的时间段。</p>
+                <p>
+                    因为靠前的测量不保证在靠后的测量之前（因为一些反常现象，例如往前往后调整系统时钟），这个函数可以失败的。
+                    <a href="../../std/time/struct.Instant.html"><code>Instant</code></a> 可以用来测量时间段，而没有这种失败的风险。</p>
+                <p>如果成功了，返回 <a href="../../std/result/enum.Result.html#variant.Ok"><code>Ok</code></a><code>(</code><a
+                        href="../../std/time/struct.Duration.html"><code>Duration</code></a><code>)</code>，这里的时间段代表从给出的点到这个点经过的时间。
+                </p>
+                <p>如果 <code>earlier</code> 比 <code>self</code> 晚，返回一个 <a
+                        href="../../std/result/enum.Result.html#variant.Err"><code>Err</code></a>，这个错误包含了到
+                    <code>self</code> 这个时间有多久。</p>
+                <h1 id="examples-2" class="section-header"><a href="#examples-2">例子</a></h1>
                 <div class="example-wrap">
                     <pre class="rust rust-example-rendered">
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">time</span>::<span class="ident">SystemTime</span>;
@@ -210,21 +194,16 @@
                     id='elapsed.v'>pub fn <a href='#method.elapsed' class='fnname'>elapsed</a>(&amp;self) -&gt; <a class="enum" href="../../std/result/enum.Result.html" title="enum std::result::Result">Result</a>&lt;<a class="struct" href="../../std/time/struct.Duration.html" title="struct std::time::Duration">Duration</a>, <a class="struct" href="../../std/time/struct.SystemTimeError.html" title="struct std::time::SystemTimeError">SystemTimeError</a>&gt;</code><a
                     class='srclink' href='../../src/std/time.rs.html#459-461' title='goto source code'>[src]</a></h4>
             <div class='docblock'>
-                <p>Returns the difference between the clock time when this
-                    system time was created, and the current clock time.</p>
-                <p>This function may fail as the underlying system clock is susceptible to
-                    drift and updates (e.g., the system clock could go backwards), so this
-                    function may not always succeed. If successful, <a
+                <p>返回此系统时间从创建到现在的时间区别。</p>
+                <p>因为系统时钟容许漂移和更新（即，系统时钟可以倒退），所以这个函数可能会失败。如果成功了，返回 <a
                         href="../../std/result/enum.Result.html#variant.Ok"><code>Ok</code></a><code>(</code><a
-                        href="../../std/time/struct.Duration.html"><code>Duration</code></a><code>)</code> is
-                    returned where the duration represents the amount of time elapsed from
-                    this time measurement to the current time.</p>
-                <p>To measure elapsed time reliably, use <a
-                        href="../../std/time/struct.Instant.html"><code>Instant</code></a> instead.</p>
-                <p>Returns an <a href="../../std/result/enum.Result.html#variant.Err"><code>Err</code></a> if
-                    <code>self</code> is later than the current system time, and
-                    the error contains how far from the current system time <code>self</code> is.</p>
-                <h1 id="examples-3" class="section-header"><a href="#examples-3">Examples</a></h1>
+                        href="../../std/time/struct.Duration.html"><code>Duration</code></a><code>)</code>，这里的时间段表示从此时间到当前时间经过的。
+                </p>
+                <p>想要可靠地测量时间，可以用 <a href="../../std/time/struct.Instant.html"><code>Instant</code></a>。</p>
+                <p>如果 <code>self</code> 比当前时间要早，返回 <a
+                        href="../../std/result/enum.Result.html#variant.Err"><code>Err</code></a>，此错误包含当前时间距离
+                    <code>self</code> 的时间段。</p>
+                <h1 id="examples-3" class="section-header"><a href="#examples-3">例子</a></h1>
                 <div class="example-wrap">
                     <pre class="rust rust-example-rendered">
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">thread</span>::<span class="ident">sleep</span>;
@@ -241,22 +220,18 @@
                     class='since' title='Stable since Rust version 1.34.0'>1.34.0</span><a class='srclink'
                     href='../../src/std/time.rs.html#467-469' title='goto source code'>[src]</a></h4>
             <div class='docblock'>
-                <p>Returns <code>Some(t)</code> where <code>t</code> is the time <code>self + duration</code> if
-                    <code>t</code> can be represented as
-                    <code>SystemTime</code> (which means it's inside the bounds of the underlying data structure),
-                    <code>None</code>
-                    otherwise.</p>
+                <p>如果 <code>self + duration</code> 能表示成
+                    <code>SystemTime</code>（也就是说和在底层数据结构能表示的范围内），那么返回 <code>Some(t)</code>，这里的 <code>t</code> 是
+                    <code>self + duration</code> 代表的时间；否则返回 <code>None</code>。</p>
             </div>
             <h4 id='method.checked_sub' class="method"><code
                     id='checked_sub.v'>pub fn <a href='#method.checked_sub' class='fnname'>checked_sub</a>(&amp;self, duration: <a class="struct" href="../../std/time/struct.Duration.html" title="struct std::time::Duration">Duration</a>) -&gt; <a class="enum" href="../../std/option/enum.Option.html" title="enum std::option::Option">Option</a>&lt;<a class="struct" href="../../std/time/struct.SystemTime.html" title="struct std::time::SystemTime">SystemTime</a>&gt;</code><span
                     class='since' title='Stable since Rust version 1.34.0'>1.34.0</span><a class='srclink'
                     href='../../src/std/time.rs.html#475-477' title='goto source code'>[src]</a></h4>
             <div class='docblock'>
-                <p>Returns <code>Some(t)</code> where <code>t</code> is the time <code>self - duration</code> if
-                    <code>t</code> can be represented as
-                    <code>SystemTime</code> (which means it's inside the bounds of the underlying data structure),
-                    <code>None</code>
-                    otherwise.</p>
+                <p>如果 <code>self - duration</code> 能表示成
+                    <code>SystemTime</code>（也就是说差在底层数据结构能表示的范围内），那么返回 <code>Some(t)</code>，这里的 <code>t</code> 是
+                    <code>self - duration</code> 代表的时间；否则返回 <code>None</code>。</p>
             </div>
         </div>
         <h2 id='implementations' class='small-section-header'>Trait Implementations<a href='#implementations'
@@ -272,8 +247,7 @@
                         class='srclink' href='../../src/std/time.rs.html#522-524' title='goto source code'>[src]</a>
                 </h4>
                 <div class='docblock hidden'>
-                    <p>Formats the value using the given formatter. <a
-                            href="../../std/fmt/trait.Debug.html#tymethod.fmt">Read more</a></p>
+                    <p>用给出的格式器格式化此值。<a href="../../std/fmt/trait.Debug.html#tymethod.fmt">Read more</a></p>
                 </div>
             </div>
             <h3 id='impl-Sub%3CDuration%3E' class='impl'><code
@@ -285,14 +259,14 @@
                         id='Output.t'>type <a href='../../std/ops/trait.Sub.html#associatedtype.Output' class="type">Output</a> = <a class="struct" href="../../std/time/struct.SystemTime.html" title="struct std::time::SystemTime">SystemTime</a></code>
                 </h4>
                 <div class='docblock'>
-                    <p>The resulting type after applying the <code>-</code> operator.</p>
+                    <p>应用 <code>-</code> 操作符之后的结果类型。</p>
                 </div>
                 <h4 id='method.sub' class="method hidden"><code
                         id='sub.v'>fn <a href='../../std/ops/trait.Sub.html#tymethod.sub' class='fnname'>sub</a>(self, dur: <a class="struct" href="../../std/time/struct.Duration.html" title="struct std::time::Duration">Duration</a>) -&gt; <a class="struct" href="../../std/time/struct.SystemTime.html" title="struct std::time::SystemTime">SystemTime</a></code><a
                         class='srclink' href='../../src/std/time.rs.html#507-510' title='goto source code'>[src]</a>
                 </h4>
                 <div class='docblock hidden'>
-                    <p>Performs the <code>-</code> operation.</p>
+                    <p>应用 <code>-</code> 操作符。</p>
                 </div>
             </div>
             <h3 id='impl-PartialEq%3CSystemTime%3E' class='impl'><code
@@ -304,14 +278,14 @@
                         id='eq.v'>fn <a href='../../std/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, other: &amp;<a class="struct" href="../../std/time/struct.SystemTime.html" title="struct std::time::SystemTime">SystemTime</a>) -&gt; <a class="primitive" href="../primitive.bool.html">bool</a></code><a
                         class='srclink' href='../../src/std/time.rs.html#117' title='goto source code'>[src]</a></h4>
                 <div class='docblock hidden'>
-                    <p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by
-                        <code>==</code>. <a href="../../std/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+                    <p>这个方法测试 <code>self</code> 和 <code>other</code> 是不是相等，在 <code>==</code> 比较中用到。 <a
+                            href="../../std/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
                 </div>
                 <h4 id='method.ne' class="method hidden"><code
                         id='ne.v'>fn <a href='../../std/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;<a class="struct" href="../../std/time/struct.SystemTime.html" title="struct std::time::SystemTime">SystemTime</a>) -&gt; <a class="primitive" href="../primitive.bool.html">bool</a></code><a
                         class='srclink' href='../../src/std/time.rs.html#117' title='goto source code'>[src]</a></h4>
                 <div class='docblock hidden'>
-                    <p>This method tests for <code>!=</code>.</p>
+                    <p>这个方法测试不相等（<code>!=</code>）。</p>
                 </div>
             </div>
             <h3 id='impl-Eq' class='impl'><code
@@ -328,7 +302,7 @@
                         id='cmp.v'>fn <a href='../../std/cmp/trait.Ord.html#tymethod.cmp' class='fnname'>cmp</a>(&amp;self, other: &amp;<a class="struct" href="../../std/time/struct.SystemTime.html" title="struct std::time::SystemTime">SystemTime</a>) -&gt; <a class="enum" href="../../std/cmp/enum.Ordering.html" title="enum std::cmp::Ordering">Ordering</a></code><a
                         class='srclink' href='../../src/std/time.rs.html#117' title='goto source code'>[src]</a></h4>
                 <div class='docblock hidden'>
-                    <p>This method returns an <code>Ordering</code> between <code>self</code> and <code>other</code>. <a
+                    <p>这个方法返回 <code>self</code> 和 <code>other</code> 的比较结果（<code>Ordering</code>）。 <a
                             href="../../std/cmp/trait.Ord.html#tymethod.cmp">Read more</a></p>
                 </div>
                 <h4 id='method.max' class="method"><code
@@ -336,28 +310,27 @@
                         class='since' title='Stable since Rust version 1.21.0'>1.21.0</span><a class='srclink'
                         href='../../src/core/cmp.rs.html#565-568' title='goto source code'>[src]</a></h4>
                 <div class='docblock'>
-                    <p>Compares and returns the maximum of two values. <a
-                            href="../../std/cmp/trait.Ord.html#method.max">Read more</a></p>
+                    <p>返回两个值的最大者。 <a href="../../std/cmp/trait.Ord.html#method.max">Read more</a></p>
                 </div>
                 <h4 id='method.min' class="method"><code
                         id='min.v'>fn <a href='../../std/cmp/trait.Ord.html#method.min' class='fnname'>min</a>(self, other: Self) -&gt; Self</code><span
                         class='since' title='Stable since Rust version 1.21.0'>1.21.0</span><a class='srclink'
                         href='../../src/core/cmp.rs.html#582-585' title='goto source code'>[src]</a></h4>
                 <div class='docblock'>
-                    <p>Compares and returns the minimum of two values. <a
-                            href="../../std/cmp/trait.Ord.html#method.min">Read more</a></p>
+                    <p>返回两个值的最小者。 <a href="../../std/cmp/trait.Ord.html#method.min">Read more</a></p>
                 </div>
                 <h4 id='method.clamp' class="method"><code
                         id='clamp.v'>fn <a href='../../std/cmp/trait.Ord.html#method.clamp' class='fnname'>clamp</a>(self, min: Self, max: Self) -&gt; Self</code><a
                         class='srclink' href='../../src/core/cmp.rs.html#606-616' title='goto source code'>[src]</a>
                 </h4>
                 <div class='stability'>
-                    <div class='stab unstable'><span class='emoji'>🔬</span> This is a nightly-only experimental API.
+                    <div class='stab unstable'><span class='emoji'>🔬</span>
+                        这是一个每日构建版本才有的实验性 API。
                         (<code>clamp</code>&nbsp;<a href="https://github.com/rust-lang/rust/issues/44095">#44095</a>)
                     </div>
                 </div>
                 <div class='docblock'>
-                    <p>Restrict a value to a certain interval. <a href="../../std/cmp/trait.Ord.html#method.clamp">Read
+                    <p>将一个值限制在确定的范围内。 <a href="../../std/cmp/trait.Ord.html#method.clamp">Read
                             more</a></p>
                 </div>
             </div>
