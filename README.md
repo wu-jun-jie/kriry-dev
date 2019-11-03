@@ -10,7 +10,7 @@
 
 1. 如果你只想修改文件，不用操作下面 `B` 的步骤，你可以修改 `docs` 目录内的任何 `.md` 文件.
 
-2. 参与Rust标准库中文翻译,直接翻译`rust-std/std`目录内的`html`文件
+2. 参与Rust标准库中文翻译,[详细](https://github.com/kriry/rust#rust编程语言)
 
 ### B. 参与网站
 
