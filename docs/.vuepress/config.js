@@ -58,7 +58,8 @@ module.exports = {
         },
         searchMaxSuggestions: 11,
         nav: [
-			 { text: 'kriry.com', link: 'http://kriry.com' },
+       { text: 'kriry.com', link: 'http://kriry.com' },
+       { text: '阅读', link: '/read/' },
 			 { text: '编程语言', items: [
 				  	{ text: 'Clang', link: '/langs/clang/' },
 				  	{ text: 'C++', link: '/langs/cpp/' },
@@ -96,9 +97,9 @@ module.exports = {
 			    { text: 'Git', link: '/tool/git/' }
 			      ]
 			},
-			 { text: '网络', link: '/www/' },
-			 { text: '微博', link: 'https://weibo.com/kriry?is_all=1' },
-			 { text: '赞助', link: '/funding.html' }
+       { text: '网络', link: '/www/' },
+       { text: '合作', link: '/funding.html' },
+			 { text: '微博', link: 'https://weibo.com/kriry?is_all=1' }
         ],
         sidebar: {
           '/langs/rust/rust/book/': book('Rust'),
