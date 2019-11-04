@@ -22,8 +22,6 @@ let { http2 } = require ('./category/protocol/http2.js')
 let { http3 } = require ('./category/protocol/http3.js')
 
 
-let { www } = require ('./category/www.js')
-
 module.exports = {
     extend: '@vuepress/theme-default',
     title: 'kriry技术',
@@ -97,7 +95,6 @@ module.exports = {
 			    { text: 'Git', link: '/tool/git/' }
 			      ]
 			},
-       { text: '网络', link: '/www/' },
        { text: '合作', link: '/funding.html' },
 			 { text: '微博', link: 'https://weibo.com/kriry?is_all=1' }
         ],
@@ -116,7 +113,7 @@ module.exports = {
           '/langs/rust/crate/serde/': serde('Serde'),
           '/langs/rust/user/book-exp/': book_exp('book_exp'),
 
-          '/langs/clang/': book_c('Clang'),
+          '/langs/clang/book/': book_c('Clang'),
 
           '/langs/cpp/book/': book_cpp('CPP'),
 
@@ -124,8 +121,6 @@ module.exports = {
           
           '/protocol/http2/': http2('HTTP2'),
           '/protocol/http3/': http3('HTTP3'),
-
-          '/www/': www('www')
         }
     }
 }

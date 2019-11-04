@@ -10,18 +10,18 @@
 ## Awesome
 
 - [Awesome-Rust](https://github.com/rust-unofficial/awesome-rust/blob/master/README.md)
-- [Awesome-Crates](/www/rust/crates.html)
-- [Awesome-Wasm](/www/rust/wasm.html)
-- [Awesome-IOT](/www/rust/iot.html)
-- [Awesome-Server](/www/rust/server.html)
-- [Awesome-Actix](/www/rust/actix.html)
-- [Awesome-Tokio](/www/rust/tokio.html)
+- [Awesome-Crates](./crates.html)
+- [Awesome-Wasm](./wasm.html)
+- [Awesome-IOT](./iot.html)
+- [Awesome-Server](./server.html)
+- [Awesome-Actix](./actix.html)
+- [Awesome-Tokio](./tokio.html)
 
 ## Rust语言
 
 * [rust-cheatsheet](https://upsuper.github.io/rust-cheatsheet)
 * [rust-cheats](https://cheats.rs/)
-* [Rust阅读](https://readrust.net/) - Rust阅读
+* [Rust阅读](https://readrust.net/)
 * [中科大开源镜像站-Rust](https://mirrors.ustc.edu.cn/)
 * [中交大开源镜像站-Rust](https://mirrors.sjtug.sjtu.edu.cn/#/)
 * [Rust-too-many-lists](http://cglab.ca/~abeinges/blah/too-many-lists/book/) - Learning Rust With Entirely Too Many Linked Lists
@@ -40,7 +40,7 @@
 
 ## 博客
 
-* [Rust语言官方博客](https://blog.rust-lang.org/) - Rust语言官方博客
+* [Rust语言官方博客](https://blog.rust-lang.org/)
 * [Aaron Turon](http://aturon.github.io/)
 * [Andrew Gallant](http://blog.burntsushi.net/)
 * [Andrew Hobden](https://hoverbear.org/tags/#rust)
