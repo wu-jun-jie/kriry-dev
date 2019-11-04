@@ -25,6 +25,7 @@ steps:
       
       cp CNAME docs/.vuepress/dist
 
+      cp -R www/rust docs/.vuepress/dist/www
 
       cp -R www/ecma262 docs/.vuepress/dist/www
 

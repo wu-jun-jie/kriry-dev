@@ -1,1 +1,0 @@
-initSidebarItems({"fn":[["__powidf2",""],["__powisf2",""]]});
